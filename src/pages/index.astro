@@ -1,11 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Content/Hero.astro';
+import About from '../components/Content/About.astro';
+
+const title = 'Julian Krzysiak';
 ---
 
-<Layout title='Julian Krzysiak'>
-  <main>
-    <div>
-      <p></p>
-    </div>
+<Layout title={title}>
+  <main class='p-12'>
+    <Hero title={title} />
+    <About />
   </main>
 </Layout>
