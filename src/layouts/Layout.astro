@@ -15,10 +15,16 @@ const { title } = Astro.props;
     <meta name='description' content='Astro description' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg"' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=League+Spartan:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700&display=swap'
+      rel='stylesheet'
+    />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class='bg-slate-300 dark:bg-slate-900'>
+  <body class='bg-violet-200 font-["Lato"] dark:bg-slate-900'>
     <Header />
     <slot />
   </body>

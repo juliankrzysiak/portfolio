@@ -1,10 +1,39 @@
-<section id='about'>
-  <h2
-    class='w-fit rounded-br-lg border-b-4 border-r-4 border-slate-800 p-4 text-3xl text-violet-800'
-  >
-    About Me
-  </h2>
-  <p class='whitespace-pre-line'>
-    Hi, I like making websites for fun in my free time.
-  </p>
+---
+import { Image } from 'astro:assets';
+import selfie from '../../assets/selfie.jpg';
+---
+
+<section id='about' class='flex flex-col gap-8 py-8'>
+  <h1 class='text-3xl'>About</h1>
+  <div class='flex flex-col items-center gap-4'>
+    <Image
+      src={selfie}
+      alt='Selfie of Julian Krzysiak.'
+      class='rounded-full border-2 border-slate-900'
+    />
+    <div class='space-y-2 text-center'>
+      <h2 class='text-2xl text-rose-700'>Julian Krzysiak</h2>
+      <h3>Full-Stack Web Developer</h3>
+    </div>
+  </div>
+  <div class='flex flex-col gap-2'>
+    <p>
+      I am a self-taught web developer who likes to hike, bike, dance, read, and
+      learn.
+    </p>
+    <p>
+      I completed a BS in Psychobiology, became an EMT, and passed the MCAT with
+      flying colors.
+    </p>
+    <p>I was going to become a doctor, initially.</p>
+    <p>I decided not to become a doctor.</p>
+    <p>
+      In college I “made” websites for my dance club, and decided that would be
+      a good as any other route.
+    </p>
+    <p>
+      Ever since then, I have worked everyday on learning as much as I can about
+      web development.
+    </p>
+  </div>
 </section>

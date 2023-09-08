@@ -1,7 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import selfie from '../../assets/selfie.jpg';
-
 interface Props {
   title: string;
 }
@@ -11,15 +8,17 @@ const { title } = Astro.props;
 
 <section
   id='hero'
-  class='flex flex-col items-center justify-around gap-8 lg:flex-row'
+  class='flex h-[calc(100vh-64px)] flex-col justify-center gap-10'
 >
-  <Image
-    src={selfie}
-    alt=`Selfie of ${title}`
-    class='w-full max-w-xl rounded-full border-4 border-slate-900'
-  />
-  <div class='flex flex-col gap-8 text-center text-slate-900'>
-    <h1 class='text-6xl font-semibold'>{title}</h1>
-    <h2 class='text-4xl'>Full-Stack Web Development</h2>
+  <div class='flex flex-col gap-2'>
+    <h1 class='text-3xl font-bold text-rose-700'>{title}</h1>
+    <h2 class='text-xl'>Full-Stack Web Developer</h2>
   </div>
+  <nav class='flex flex-col gap-4 text-lg'>
+    <a href='#about'>Tell me <b class='text-rose-700'>about</b> yourself?</a>
+    <a href='#projects'
+      >What <b class='text-rose-700'>projects</b> have you made?</a
+    >
+    <a href='#contact'>How do I <b class='text-rose-700'>contact</b> you?</a>
+  </nav>
 </section>
