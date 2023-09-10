@@ -1,0 +1,38 @@
+---
+import selfie from '/src/assets/selfie.jpg';
+
+import ProjectCard from '../General/ProjectCard.astro';
+export interface Project {
+  title: string;
+  summary: string;
+  img: {
+    src: ImageMetadata;
+    alt: string;
+  };
+  links: {
+    website: string;
+    github: string;
+  };
+}
+
+const projects: Project[] = [
+  {
+    title: 'Journey',
+    summary:
+      'A road trip planning website for saving destinations and creating intineraries for your adventures.',
+    img: {
+      src: selfie,
+      alt: 'Website preview showcasing map planning.',
+    },
+    links: {
+      website: 'https://github.com/CastillejaCode/journey',
+      github: 'https://github.com/CastillejaCode/journey',
+    },
+  },
+];
+---
+
+<section id='projects' class='flex flex-col gap-8'>
+  <h1 class='text-3xl'>Projects</h1>
+  {projects.map((project) => <ProjectCard details={project} />)}
+</section>
