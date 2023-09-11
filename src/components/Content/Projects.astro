@@ -1,0 +1,67 @@
+---
+import selfie from '/src/assets/selfie.jpg';
+
+import ProjectCard from '../General/ProjectCard.astro';
+
+export interface Project {
+  title: string;
+  summary: string;
+  img: {
+    src: ImageMetadata;
+    alt: string;
+  };
+  links: {
+    website: string;
+    github: string;
+  };
+}
+
+const projects: Project[] = [
+  {
+    title: 'Journey',
+    summary:
+      'A road trip planning website that maps out every destination you want to go, for every day of your trip. ',
+    img: {
+      src: selfie,
+      alt: 'Website preview showcasing map planning',
+    },
+    links: {
+      website: 'https://github.com/CastillejaCode/journey',
+      github: 'https://github.com/CastillejaCode/journey',
+    },
+  },
+  {
+    title: 'Hydration',
+    summary:
+      'A plant watering website that keeps tracks of when you watered your plants, and also displays when and what you should water next.',
+    img: {
+      src: selfie,
+      alt: 'Website preview showcasing calendar',
+    },
+    links: {
+      website: 'https://github.com/CastillejaCode/water-schedule',
+      github: 'https://github.com/CastillejaCode/water-schedule',
+    },
+  },
+  {
+    title: 'Book:L',
+    summary:
+      'A book tracking website that records books completed, along with user ratings and reviews.',
+    img: {
+      src: selfie,
+      alt: 'Website preview showcasing calendar',
+    },
+    links: {
+      website: 'https://github.com/CastillejaCode/book-list',
+      github: 'https://github.com/CastillejaCode/book-list',
+    },
+  },
+];
+---
+
+<section id='projects' class='flex flex-col gap-8 py-4'>
+  <h1 class='text-3xl'>Projects</h1>
+  <ol class='flex flex-col gap-8'>
+    {projects.map((project) => <ProjectCard details={project} />)}
+  </ol>
+</section>
