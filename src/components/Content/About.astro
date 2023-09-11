@@ -3,8 +3,8 @@ import { Image } from 'astro:assets';
 import selfie from '../../assets/selfie.jpg';
 ---
 
-<section id='about' class='flex flex-col gap-8 py-4'>
-  <h1 class='text-3xl'>About</h1>
+<section id='about' class='flex flex-col gap-8 py-8'>
+  <a href='#about' class='text-3xl dark:text-violet-300'>About</a>
   <div class='flex flex-col items-center gap-4'>
     <Image
       src={selfie}
@@ -12,7 +12,9 @@ import selfie from '../../assets/selfie.jpg';
       class='rounded-full border-2 border-slate-900'
     />
     <div class='space-y-2 text-center'>
-      <h2 class='text-2xl text-rose-700'>Julian Krzysiak</h2>
+      <h2 class='text-2xl text-rose-700 dark:text-violet-300'>
+        Julian Krzysiak
+      </h2>
       <h3>Full-Stack Web Developer</h3>
     </div>
   </div>
