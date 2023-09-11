@@ -11,14 +11,21 @@ const { title } = Astro.props;
   class='flex h-[calc(100vh-64px)] flex-col justify-center gap-10'
 >
   <div class='flex flex-col gap-2'>
-    <h1 class='text-3xl font-bold text-rose-700'>{title}</h1>
+    <h1 class='text-3xl font-bold text-rose-700 dark:text-violet-300'>
+      {title}
+    </h1>
     <h2 class='text-xl'>Full-Stack Web Developer</h2>
   </div>
   <nav class='flex flex-col gap-4 text-lg'>
-    <a href='#about'>Tell me <b class='text-rose-700'>about</b> yourself?</a>
-    <a href='#projects'
-      >What <b class='text-rose-700'>projects</b> have you made?</a
+    <a href='#about'
+      >Tell me <b class='text-rose-700 dark:text-violet-300'>about</b> yourself?</a
     >
-    <a href='#contact'>How do I <b class='text-rose-700'>contact</b> you?</a>
+    <a href='#projects'
+      >What <b class='text-rose-700 dark:text-violet-300'>projects</b> have you
+      made?</a
+    >
+    <a href='#contact'
+      >How do I <b class='text-rose-700 dark:text-violet-300'>contact</b> you?</a
+    >
   </nav>
 </section>

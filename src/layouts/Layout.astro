@@ -44,7 +44,9 @@ const { title } = Astro.props;
     </script>
     <title>{title}</title>
   </head>
-  <body class='bg-violet-200 font-["Lato"] dark:bg-slate-900'>
+  <body
+    class='bg-violet-200 font-["Lato"] text-slate-900 dark:bg-slate-900 dark:text-slate-50'
+  >
     <Header />
     <slot />
     <Footer />
