@@ -1,14 +1,12 @@
 <button class='dark-mode-button' aria-label='Dark Mode Toggle'>
-  <img src='moon.svg' alt='Moon' class='aspect-square h-6' />
+  <img src='/moon.svg' alt='Moon' class='h-6 text-violet-300' />
 </button>
 
 <script>
-  const darkModeButton = document.querySelector('.dark-mode-button');
-  const darkModeButtonImg = darkModeButton?.querySelector(
-    'img',
-  ) as HTMLImageElement;
-
-  darkModeButton?.addEventListener('click', () => {
+  const darkModeButton = document.querySelector(
+    '.dark-mode-button',
+  ) as HTMLButtonElement;
+  darkModeButton.addEventListener('click', () => {
     if (
       localStorage.theme === 'dark' ||
       (!('theme' in localStorage) &&
@@ -16,12 +14,9 @@
     ) {
       document.documentElement.classList.remove('dark');
       localStorage.theme = 'light';
-      darkModeButtonImg.src = 'moon.svg';
     } else {
-      console.log(123);
       document.documentElement.classList.add('dark');
       localStorage.theme = 'dark';
-      darkModeButtonImg.src = 'sun.svg';
     }
   });
 </script>
