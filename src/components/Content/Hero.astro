@@ -8,15 +8,17 @@ const { title } = Astro.props;
 
 <section
   id='hero'
-  class='flex h-[calc(100vh-64px)] flex-col justify-center gap-10'
+  class='flex h-[calc(100vh-64px)] flex-col justify-center gap-10 lg:h-[calc(100vh-84px)] lg:gap-16'
 >
   <div class='flex flex-col gap-2'>
-    <h1 class='text-3xl font-bold text-rose-700 dark:text-violet-300'>
+    <h1
+      class='text-3xl font-bold text-rose-700 dark:text-violet-300 lg:text-5xl'
+    >
       {title}
     </h1>
-    <h2 class='text-xl'>Full-Stack Web Developer</h2>
+    <h2 class='text-xl lg:text-3xl'>Full-Stack Web Developer</h2>
   </div>
-  <nav class='flex flex-col gap-4 text-lg'>
+  <nav class='flex flex-col gap-4 text-lg lg:text-xl'>
     <a href='#about'
       >Tell me <b class='text-rose-700 dark:text-violet-300'>about</b> yourself?</a
     >
