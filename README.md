@@ -74,7 +74,14 @@ Desktop Light             |  Mobile Dark
 
 ### Built With
 
-* [![Astro][Astro]][Astro-url]
+<a href="https://astro.build/">  
+<img alt="Astro Static Badge" src="https://img.shields.io/badge/Astro-2A233E?style=for-the-badge&logo=astro&logoColor=ff7e33" height="50">
+</a> 
+<br/>
+<a href="https://tailwindcss.com/">  
+<img alt="Tailwind Css Static Badge" src="https://img.shields.io/badge/Tailwind%20CSS-2A233E?style=for-the-badge&logo=tailwindcss&logoColor=0EA5E9&color=%230f172a" height="50">
+</a>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,7 +210,7 @@ Project Link: [https://github.com/CastillejaCode/portfolio](https://github.com/C
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: https://imgur.com/hTUM4Tr.png
-[Astro]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Astro]: https://img.shields.io/badge/Astro-2A233E?style=for-the-badge&logo=astro&logoColor=ff7e33
 [Astro-url]: https://astro.build/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
