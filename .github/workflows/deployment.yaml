@@ -1,0 +1,32 @@
+name: Deployment Pipeline
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Trigger Deployment to CloudFlare Pages
+        if: |
+          github.event_name == 'push' && 
+          contains(join(toJson(github.event.commits.*.message)), '#skip') != true
+        run: curl -X POST ${{ secrets.CLOUDFLARE_DEPLOY_HOOK}}
+  tag_release:
+    if: |
+          github.event_name == 'push' && 
+          contains(join(toJson(github.event.commits.*.message)), '#skip') != true
+    needs: deployment
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+          
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.64.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
