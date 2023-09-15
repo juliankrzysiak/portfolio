@@ -119,5 +119,6 @@ Julian Krzysiak - jkrzysiak13@gmail.com
 
 * Favicon generator - [favicon.io](https://favicon.io/)
 * Icons - [Hero Icons](https://heroicons.com/)
+* Readme Template - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
