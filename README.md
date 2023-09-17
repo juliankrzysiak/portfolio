@@ -18,7 +18,7 @@
 <h3 align="center">Portfolio</h3>
 
   <p align="center">
-    My personal portfolio website that showcases my projects, who I am, and my contact information.
+    My portfolio website for showcasing my projects, who I am, and my contact information.
     <br />
     <br />
     <a href="https://github.com/CastillejaCode/portfolio">View Demo</a>
@@ -49,17 +49,17 @@ Desktop Light             |  Mobile Dark
 
 I wanted to build a simple one-page personal website, and with each new project, I might as well learn something new.
 
-So I picked Astro, a framework utilizing server-side rendering for static sites, which was the perfect use case for me; a small, fast, simple website.
-It didn't take too long to code, everything was HTML and CSS, great for speed. The only JS I have is dedicated to controlling the light/dark mode. 
+So I picked Astro, a framework utilizing static site generation, which was the perfect use case for me; a small, fast, simple website.
+The development process was enjoyable, and due to the intentional lack of JavaScript (the only JS I have is for controlling the light/dark mode), the creation was quick as well as the loading times.   
 
 ### Optimizations
 
-Using server-side rendering along with just HTML and CSS makes the website pretty fast already. The included images are also optimized by Astro. 
+Using static site generation makes the website pretty fast already. The included images are also optimized by Astro. 
 
 Designing the whole website for both mobile and desktop, in both light and dark mode, was very beneficial. I can mess up and develop the design much faster in Figma,
 and then I just have to copy the design over. The design is also more coherent and clean. 
 
-Also, I had to change some things in order to be more accessible; I would rather have a more accessible site than a "pretty" aesthetic. 
+Also, I had to change some things to be more accessible; I would rather have a more accessible website than a more aesthetic website (but you can certainly have both!). 
 I was going to add some superfluous animations and the like, but at the end of the day, this website is just for information.
 
 
