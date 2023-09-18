@@ -1,5 +1,7 @@
 ---
-import selfie from '/src/assets/selfie.jpg';
+import journey from '/src/assets/journey_screenshot.png';
+import hydration from '/src/assets/hydration_screenshot.png';
+import books from '../../assets/books_screenshot.png';
 
 import ProjectCard from '../General/ProjectCard.astro';
 
@@ -22,8 +24,8 @@ const projects: Project[] = [
     summary:
       'A road trip planning website that maps out every destination you want to go, for every day of your trip. ',
     img: {
-      src: selfie,
-      alt: 'Website preview showcasing map planning',
+      src: journey,
+      alt: 'Preview of website',
     },
     links: {
       website: 'https://github.com/CastillejaCode/journey',
@@ -35,8 +37,8 @@ const projects: Project[] = [
     summary:
       'A plant watering website that keeps tracks of when you watered your plants, and also displays when and what you should water next.',
     img: {
-      src: selfie,
-      alt: 'Website preview showcasing calendar',
+      src: hydration,
+      alt: 'Preview of website',
     },
     links: {
       website: 'https://github.com/CastillejaCode/water-schedule',
@@ -44,12 +46,12 @@ const projects: Project[] = [
     },
   },
   {
-    title: 'Book:L',
+    title: 'Book List',
     summary:
       'A book tracking website that records books completed, along with user ratings and reviews.',
     img: {
-      src: selfie,
-      alt: 'Website preview showcasing calendar',
+      src: books,
+      alt: 'Preview of website',
     },
     links: {
       website: 'https://github.com/CastillejaCode/book-list',
@@ -64,7 +66,8 @@ const projects: Project[] = [
     Projects
   </a>
   <div
-    class='flex flex-col gap-8 lg:grid lg:grid-cols-2 [&>*:first-child]:col-span-full [&>*:first-child]:place-self-center'>
+    class='flex flex-col gap-8 lg:grid lg:grid-cols-2 [&>*:first-child]:col-span-full [&>*:first-child]:place-self-center'
+  >
     {projects.map((project) => <ProjectCard details={project} />)}
   </div>
 </section>
