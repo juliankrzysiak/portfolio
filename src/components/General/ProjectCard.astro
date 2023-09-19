@@ -26,18 +26,27 @@ const {
       <Image
         src={src}
         alt={alt}
-        class='aspect-video rounded-md border border-slate-900'
+        class='aspect-[4/3] rounded-md border border-slate-900'
       />
       <p class='lg:text-lg'>{summary}</p>
     </div>
     <div
       class='flex justify-between text-2xl font-bold text-slate-900 dark:text-xl dark:font-normal dark:text-violet-300'
     >
-      <a
-        href={website}
-        class='rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'
-        >Website</a
-      >
+      {
+        website ? (
+          <a
+            href={website}
+            class='rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'
+          >
+            Website
+          </a>
+        ) : (
+          <div class='rounded-lg line-through first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'>
+            Website
+          </div>
+        )
+      }
       <a
         href={github}
         class='rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'
