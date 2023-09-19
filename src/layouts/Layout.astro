@@ -19,12 +19,6 @@ const { title } = Astro.props;
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
     <link rel='manifest' href='/site.webmanifest' />
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-    <link
-      href='https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=League+Spartan:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700&display=swap'
-      rel='stylesheet'
-    />
     <meta name='generator' content={Astro.generator} />
     <!-- This controls the logic for changing the dark mode buttons appearance based on the users set preference -->
     <script>
@@ -48,10 +42,29 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class='stuff bg-violet-200 font-["Lato"] text-slate-900 dark:bg-slate-900 dark:text-slate-50'
+    class='stuff bg-violet-200 text-slate-900 dark:bg-slate-900 dark:text-slate-50'
   >
     <Header />
     <slot />
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  /* lato-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+</style>
