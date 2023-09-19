@@ -13,7 +13,7 @@ export interface Project {
     alt: string;
   };
   links: {
-    website: string;
+    website?: string;
     github: string;
   };
 }
@@ -28,7 +28,6 @@ const projects: Project[] = [
       alt: 'Preview of website',
     },
     links: {
-      website: 'https://github.com/CastillejaCode/journey',
       github: 'https://github.com/CastillejaCode/journey',
     },
   },
@@ -54,7 +53,6 @@ const projects: Project[] = [
       alt: 'Preview of website',
     },
     links: {
-      website: 'https://github.com/CastillejaCode/book-list',
       github: 'https://github.com/CastillejaCode/book-list',
     },
   },

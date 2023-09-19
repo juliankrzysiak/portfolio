@@ -35,9 +35,10 @@ const {
     >
       <a
         href={website}
-        class='rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'
-        >Website</a
+        class=`rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit ${!website && 'line-through'}`
       >
+        Website
+      </a>
       <a
         href={github}
         class='rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'
