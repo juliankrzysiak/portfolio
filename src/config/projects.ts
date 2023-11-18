@@ -1,6 +1,6 @@
 import type { Project } from '../types';
 
-import journey from '/src/assets/journey_screenshot.png';
+import roam from '/src/assets/roam_screenshot.png';
 import hydration from '/src/assets/hydration_screenshot.png';
 import books from '/src/assets/tomeTracker_screenshot.png';
 import jiaolongart from '/src/assets/jiaolongart_screenshot.png';
@@ -8,7 +8,7 @@ import jiaolongart from '/src/assets/jiaolongart_screenshot.png';
 export const projects: Project[] = [
   {
     title: 'JiaolongArt',
-    summary: "Commissioned website for showcasing artist's select portfolio. ",
+    summary: "Commissioned website for showcasing artist's select portfolio.",
     img: {
       src: jiaolongart,
     },
@@ -17,11 +17,11 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Journey',
+    title: 'ROAM',
     summary:
-      'A road trip planning website that maps out every destination you want to go, for every day of your trip.',
+      'A road trip planning website that maps out every destination you want to go to, for every day of your trip.',
     img: {
-      src: journey,
+      src: roam,
     },
     links: {
       github: 'https://github.com/CastillejaCode/journey',
