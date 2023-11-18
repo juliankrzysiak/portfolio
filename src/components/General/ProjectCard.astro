@@ -11,9 +11,7 @@ const {
 } = Astro.props;
 ---
 
-<article
-  class='flex max-w-xl flex-col rounded-lg border-2 border-slate-900 bg-slate-300 shadow-md dark:bg-slate-800'
->
+<article class='flex max-w-xl flex-col rounded-lg dark:bg-slate-800'>
   <h1
     class='my-3 text-center text-3xl dark:text-violet-300 lg:m-0 lg:my-4 lg:text-4xl'
   >
@@ -25,10 +23,10 @@ const {
     <div class='flex flex-col gap-2'>
       <Image
         src={src}
-        alt={alt}
+        alt={alt ?? 'Preview of website'}
         class='aspect-[4/3] rounded-md border border-slate-900'
       />
-      <p class='lg:text-lg'>{summary}</p>
+      <p class='px-2 lg:text-lg'>{summary}</p>
     </div>
     <div
       class='flex justify-between text-2xl font-bold text-slate-900 dark:text-xl dark:font-normal dark:text-violet-300'
@@ -47,11 +45,20 @@ const {
           </div>
         )
       }
-      <a
-        href={github}
-        class='rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'
-        >GitHub</a
-      >
+      {
+        github ? (
+          <a
+            href={github}
+            class='rounded-lg first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'
+          >
+            GitHub
+          </a>
+        ) : (
+          <div class='rounded-lg line-through first-letter:text-rose-700 dark:bg-slate-900 dark:px-4 dark:py-1 dark:first-letter:text-inherit'>
+            GitHub
+          </div>
+        )
+      }
     </div>
   </div>
 </article>

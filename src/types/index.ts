@@ -3,10 +3,10 @@ export interface Project {
   summary: string;
   img: {
     src: ImageMetadata;
-    alt: string;
+    alt?: string;
   };
   links: {
     website?: string;
-    github: string;
+    github?: string;
   };
 }
