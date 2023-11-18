@@ -2,16 +2,26 @@ import type { Project } from '../types';
 
 import journey from '/src/assets/journey_screenshot.png';
 import hydration from '/src/assets/hydration_screenshot.png';
-import books from '/src/assets/books_screenshot.png';
+import books from '/src/assets/tomeTracker_screenshot.png';
+import jiaolongart from '/src/assets/jiaolongart_screenshot.png';
 
 export const projects: Project[] = [
   {
+    title: 'JiaolongArt',
+    summary: "Commissioned website for showcasing artist's select portfolio. ",
+    img: {
+      src: jiaolongart,
+    },
+    links: {
+      website: 'https://jiaolongart.com/',
+    },
+  },
+  {
     title: 'Journey',
     summary:
-      'A road trip planning website that maps out every destination you want to go, for every day of your trip. ',
+      'A road trip planning website that maps out every destination you want to go, for every day of your trip.',
     img: {
       src: journey,
-      alt: 'Preview of website',
     },
     links: {
       github: 'https://github.com/CastillejaCode/journey',
@@ -20,23 +30,21 @@ export const projects: Project[] = [
   {
     title: 'Hydration',
     summary:
-      'A plant watering website that keeps tracks of when you watered your plants, and also displays when and what you should water next.',
+      'Record when you watered your plants and when you need to water them next using a calendar.',
     img: {
       src: hydration,
-      alt: 'Preview of website',
     },
     links: {
-      website: 'https://github.com/CastillejaCode/water-schedule',
+      website: 'https://water-schedule.pages.dev',
       github: 'https://github.com/CastillejaCode/water-schedule',
     },
   },
   {
-    title: 'Book List',
+    title: 'tomeTracker',
     summary:
-      'A book tracking website that records books completed, along with user ratings and reviews.',
+      "Track what books you've read. Input ratings, reviews, finish dates, filter and search for books, and more.",
     img: {
       src: books,
-      alt: 'Preview of website',
     },
     links: {
       github: 'https://github.com/CastillejaCode/book-list',
