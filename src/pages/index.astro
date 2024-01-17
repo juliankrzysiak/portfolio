@@ -9,10 +9,20 @@ const title = 'Julian Krzysiak';
 ---
 
 <Layout title={title}>
-  <main class='mx-auto flex max-w-5xl flex-col px-8'>
+  <main>
     <Hero title={title} />
     <About />
     <Projects />
     <Contact />
   </main>
 </Layout>
+
+<style>
+  main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 64rem;
+    padding: 0 2rem;
+  }
+</style>
