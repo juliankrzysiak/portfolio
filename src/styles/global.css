@@ -12,6 +12,12 @@
   --text-7xl: 4.25rem;
 
   --color-background: hsl(251, 95%, 92%);
+  --color-neutral: hsl(222, 47%, 11%);
+}
+
+:root.dark {
+  --color-background: hsl(222, 47%, 11%);
+  --color-neutral: hsl(210, 40%, 98%);
 }
 
 @font-face {

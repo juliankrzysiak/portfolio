@@ -39,7 +39,7 @@ const { title } = Astro.props;
     </script>
     <title>{title}</title>
   </head>
-  <body class='text-slate-900 dark:bg-slate-900 dark:text-slate-50'>
+  <body>
     <Header />
     <slot />
     <Footer />
@@ -48,6 +48,7 @@ const { title } = Astro.props;
 
 <style>
   body {
+    color: var(--color-neutral);
     background-color: var(--color-background);
   }
 </style>
