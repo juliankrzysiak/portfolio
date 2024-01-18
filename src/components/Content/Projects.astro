@@ -3,14 +3,35 @@ import ProjectCard from '../General/ProjectCard.astro';
 import { projects } from '../../config/projects.ts';
 ---
 
-<section
-  id='projects'
-  class='flex flex-col gap-8 pb-8 pt-4 lg:gap-12 lg:pb-12 lg:pt-8'
->
-  <a href='#projects' class='text-3xl dark:text-violet-300 lg:text-5xl'>
-    Projects
-  </a>
-  <div class='grid place-content-center gap-8 lg:grid-cols-2'>
+<section id='projects'>
+  <a href='#projects' class='section-title'>Projects</a>
+  <div>
     {projects.map((project) => <ProjectCard details={project} />)}
   </div>
 </section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0 2rem;
+  }
+
+  div {
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    section {
+      gap: 3rem;
+      padding: 2rem 0 3rem;
+    }
+
+    div {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

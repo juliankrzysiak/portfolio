@@ -1,6 +1,7 @@
 ---
-import Header from '../components/General/Header.astro';
 import Footer from '../components/General/Footer.astro';
+import Header from '../components/General/Header.astro';
+import '../styles/global.css';
 
 interface Props {
   title: string;
@@ -38,28 +39,17 @@ const { title } = Astro.props;
     </script>
     <title>{title}</title>
   </head>
-  <body class='bg-violet-200 text-slate-900 dark:bg-slate-900 dark:text-slate-50'>
+  <body>
     <Header />
     <slot />
     <Footer />
   </body>
 </html>
 
-<style is:global>
-  /* lato-regular - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* lato-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+<style>
+  body {
+    font-family: Lato;
+    color: var(--color-neutral);
+    background-color: var(--color-background);
   }
 </style>

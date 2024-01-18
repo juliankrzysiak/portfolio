@@ -6,28 +6,72 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<section
-  id='hero'
-  class='flex h-[calc(100vh-64px)] flex-col justify-center gap-10 lg:h-[calc(100vh-84px)] lg:gap-16'
->
-  <div class='flex flex-col gap-2'>
-    <h1
-      class='text-3xl font-bold text-rose-700 dark:text-violet-300 lg:text-5xl'
-    >
+<section id='hero'>
+  <div>
+    <h1>
       {title}
     </h1>
-    <h2 class='text-xl lg:text-3xl'>Full-Stack Web Developer</h2>
+    <h2>Full-Stack Web Developer</h2>
   </div>
-  <nav class='flex flex-col gap-4 text-lg lg:text-xl'>
-    <a href='#about'
-      >Tell me <b class='text-rose-700 dark:text-violet-300'>about</b> yourself?</a
-    >
-    <a href='#projects'
-      >What <b class='text-rose-700 dark:text-violet-300'>projects</b> have you
-      made?</a
-    >
-    <a href='#contact'
-      >How do I <b class='text-rose-700 dark:text-violet-300'>contact</b> you?</a
-    >
+  <nav>
+    <a href='#about'>Tell me <b>about</b> yourself?</a>
+    <a href='#projects'>What <b>projects</b> have you made?</a>
+    <a href='#contact'>How do I <b>contact</b> you?</a>
   </nav>
 </section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    height: calc(100vh - 64px);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  h1 {
+    color: var(--color-primary);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: var(--text-lg);
+  }
+
+  b {
+    color: var(--color-primary);
+  }
+
+  @media (min-width: 1024px) {
+    section {
+      height: calc(100vh - 84px);
+      gap: 4rem;
+    }
+
+    h1 {
+      font-size: var(--text-5xl);
+    }
+
+    h2 {
+      font-size: var(--text-3xl);
+    }
+
+    nav {
+      font-size: var(--text-xl);
+    }
+  }
+</style>
