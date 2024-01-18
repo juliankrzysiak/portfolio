@@ -1,7 +1,7 @@
 ---
-import '../styles/global.css';
-import Header from '../components/General/Header.astro';
 import Footer from '../components/General/Footer.astro';
+import Header from '../components/General/Header.astro';
+import '../styles/global.css';
 
 interface Props {
   title: string;
@@ -48,6 +48,7 @@ const { title } = Astro.props;
 
 <style>
   body {
+    font-family: Lato;
     color: var(--color-neutral);
     background-color: var(--color-background);
   }
