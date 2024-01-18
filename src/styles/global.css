@@ -13,12 +13,15 @@
 
   --color-primary: hsl(345, 83%, 41%);
   --color-background: hsl(251, 95%, 92%);
+
   --color-neutral: hsl(222, 47%, 11%);
+  --color-neutral-dark: hsl(222, 47%, 11%);
 }
 
 :root.dark {
   --color-primary: hsl(252, 95%, 85%);
   --color-background: hsl(222, 47%, 11%);
+
   --color-neutral: hsl(210, 40%, 98%);
 }
 
