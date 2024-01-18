@@ -1,4 +1,16 @@
-<footer class='flex justify-between p-4 lg:px-8'>
+<footer>
   <p>© 2023 Julian Krzysiak</p>
   <p>Made with Astro</p>
 </footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    @media (min-width: 1024px) {
+      padding: 1rem 2rem;
+    }
+  }
+</style>

@@ -25,4 +25,14 @@ const title = 'Julian Krzysiak';
     max-width: 64rem;
     padding: 0 2rem;
   }
+
+  main :global(.section-title) {
+    font-size: var(--text-3xl);
+    color: var(--color-primary);
+    letter-spacing: 0.025rem;
+
+    @media (min-width: 1024px) {
+      font-size: var(--text-5xl);
+    }
+  }
 </style>
