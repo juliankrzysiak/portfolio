@@ -3,7 +3,11 @@ import DarkModeButton from './DarkModeButton.svelte';
 ---
 
 <header>
-  <a href='#'>JK</a>
+  <nav>
+    <a href='#'>JK</a>
+    <a href='#'>Blog</a>
+    <a href='#'>Reviews</a>
+  </nav>
   <DarkModeButton client:load="svelte" />
 </header>
 
@@ -12,14 +16,27 @@ import DarkModeButton from './DarkModeButton.svelte';
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     color: var(--color-neutral);
   }
+
+  nav {
+    width: 50%;
+    max-width: 24rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  a:first-child {
+    font-size: var(--text-2xl);
+  }
+
 
   @media (min-width: 1024px) {
     header {
       padding: 1.5rem;
-      font-size: var(--text-3xl);
     }
   }
 </style>
