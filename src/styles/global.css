@@ -13,28 +13,53 @@
   --text-6xl: 3.75rem;
   --text-7xl: 4.25rem;
 
-  --color-neutral-50: hsl(210, 40%, 98%);
-  --color-neutral-100: hsl(210, 40%, 96%);
-  --color-neutral-200: hsl(214, 32%, 91%);
-  --color-neutral-300: hsl(213, 27%, 84%);
-  --color-neutral-400: hsl(215, 20%, 65%);
-  --color-neutral-500: hsl(215, 16%, 47%);
-  --color-neutral-600: hsl(215, 19%, 35%);
-  --color-neutral-700: hsl(215, 25%, 27%);
-  --color-neutral-800: hsl(217, 33%, 17%);
-  --color-neutral-900: hsl(222, 47%, 11%);
-  --color-neutral-950: hsl(229, 84%, 5%);
+  --color-slate-50: hsl(210, 40%, 98%);
+  --color-slate-100: hsl(210, 40%, 96%);
+  --color-slate-200: hsl(214, 32%, 91%);
+  --color-slate-300: hsl(213, 27%, 84%);
+  --color-slate-400: hsl(215, 20%, 65%);
+  --color-slate-500: hsl(215, 16%, 47%);
+  --color-slate-600: hsl(215, 19%, 35%);
+  --color-slate-700: hsl(215, 25%, 27%);
+  --color-slate-800: hsl(217, 33%, 17%);
+  --color-slate-900: hsl(222, 47%, 11%);
+  --color-slate-950: hsl(229, 84%, 5%);
+
+
+  --color-rose-50: hsl(356, 100%, 97%);
+  --color-rose-100: hsl(356, 100%, 95%);
+  --color-rose-200: hsl(353, 96%, 90%);
+  --color-rose-300: hsl(353, 96%, 82%);
+  --color-rose-400: hsl(351, 95%, 71%);
+  --color-rose-500: hsl(350, 89%, 60%);
+  --color-rose-600: hsl(347, 77%, 50%);
+  --color-rose-700: hsl(345, 83%, 41%);
+  --color-rose-800: hsl(345, 83%, 41%);
+  --color-rose-900: hsl(342, 75%, 30%);
+  --color-rose-950: hsl(343, 88%, 16%);
+
+  --color-violet-50: hsl(250, 100%, 98%);
+  --color-violet-100: hsl(251, 91%, 95%);
+  --color-violet-200: hsl(251, 95%, 92%);
+  --color-violet-300: hsl(252, 95%, 85%);
+  --color-violet-400: hsl(255, 92%, 76%);
+  --color-violet-500: hsl(255, 92%, 76%);
+  --color-violet-600: hsl(262, 83%, 58%);
+  --color-violet-700: hsl(263, 70%, 50%);
+  --color-violet-800: hsl(263, 69%, 42%);
+  --color-violet-900: hsl(264, 67%, 35%);
+  --color-violet-950: hsl(261, 73%, 23%);
 
   
-  --color-primary: hsl(345, 83%, 41%);
-  --color-background: hsl(251, 95%, 92%);
-  --color-neutral: var(--color-neutral-900);
+  --color-primary: var(--color-rose-700);
+  --color-background: var(--color-violet-200);
+  --color-neutral: var(--color-slate-900);
 }
 
 :root.dark {
-  --color-primary: hsl(252, 95%, 85%);
-  --color-background: hsl(222, 47%, 11%);
-  --color-neutral: var(--color-neutral-100);
+  --color-primary: var(--color-violet-300);
+  --color-background: var(--color-slate-900);
+  --color-neutral: var(--color-slate-200);
 }
 
 
