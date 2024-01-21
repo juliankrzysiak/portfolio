@@ -1,10 +1,10 @@
 ---
-import DarkModeButton from './DarkModeButton.astro';
+import DarkModeButton from './DarkModeButton.svelte';
 ---
 
 <header>
   <a href='#'>JK</a>
-  <DarkModeButton />
+  <DarkModeButton client:load="svelte" />
 </header>
 
 <style>
