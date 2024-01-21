@@ -13,18 +13,28 @@
   --text-6xl: 3.75rem;
   --text-7xl: 4.25rem;
 
+  --color-neutral-50: hsl(210, 40%, 98%);
+  --color-neutral-100: hsl(210, 40%, 96%);
+  --color-neutral-200: hsl(214, 32%, 91%);
+  --color-neutral-300: hsl(213, 27%, 84%);
+  --color-neutral-400: hsl(215, 20%, 65%);
+  --color-neutral-500: hsl(215, 16%, 47%);
+  --color-neutral-600: hsl(215, 19%, 35%);
+  --color-neutral-700: hsl(215, 25%, 27%);
+  --color-neutral-800: hsl(217, 33%, 17%);
+  --color-neutral-900: hsl(222, 47%, 11%);
+  --color-neutral-950: hsl(229, 84%, 5%);
+
+  
   --color-primary: hsl(345, 83%, 41%);
   --color-background: hsl(251, 95%, 92%);
-
-  --color-neutral: hsl(222, 47%, 11%);
-  --color-neutral-dark: hsl(222, 47%, 11%);
+  --color-neutral: var(--color-neutral-900);
 }
 
 :root.dark {
   --color-primary: hsl(252, 95%, 85%);
   --color-background: hsl(222, 47%, 11%);
-
-  --color-neutral: hsl(210, 40%, 98%);
+  --color-neutral: var(--color-neutral-100);
 }
 
 
