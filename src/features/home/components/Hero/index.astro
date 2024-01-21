@@ -14,9 +14,9 @@ const { title } = Astro.props;
     <h2>Full-Stack Web Developer</h2>
   </div>
   <nav>
-    <a href='#about'>Tell me <b>about</b> yourself?</a>
-    <a href='#projects'>What <b>projects</b> have you made?</a>
-    <a href='#contact'>How do I <b>contact</b> you?</a>
+    <a href='#about'>Tell me <strong>about</strong> yourself?</a>
+    <a href='#projects'>What <strong>projects</strong> have you made?</a>
+    <a href='#contact'>How do I <strong>contact</strong> you?</a>
   </nav>
 </section>
 
@@ -37,6 +37,7 @@ const { title } = Astro.props;
 
   h1 {
     color: var(--color-primary);
+    transition: color .5s;
     font-size: var(--text-3xl);
     font-weight: 700;
   }
@@ -52,9 +53,24 @@ const { title } = Astro.props;
     font-size: var(--text-lg);
   }
 
-  b {
+  
+  strong {
     color: var(--color-primary);
   }
+  
+  a:nth-child(1) strong {
+    transition: color .5s .1s;
+  }
+
+   a:nth-child(2) strong {
+    transition: color .5s .2s;
+  }
+   a:nth-child(3) strong {
+    transition: color .5s .3s;
+  }
+ 
+ 
+
 
   @media (min-width: 1024px) {
     section {
