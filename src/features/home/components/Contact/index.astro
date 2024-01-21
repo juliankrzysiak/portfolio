@@ -1,7 +1,12 @@
+---
+import CodeBlock from './CodeBlock.svelte';
+---
+
 <section id='contact'>
   <a href='#contact' class='section-title'>Contact</a>
   <div>
-    <h3>jkrzysiak13@gmail.com</h3>
+    <CodeBlock client:load='svelte' />
+
     <div class='links'>
       <a href='https://github.com/CastillejaCode'>GitHub</a>
       <a href='https://www.linkedin.com/in/jkrzysiak'>LinkedIn</a>
@@ -38,13 +43,6 @@
     text-decoration: underline var(--color-rose-800);
   }
 
-  h3 {
-    align-self: center;
-    text-align: center;
-    font-size: var(--text-2xl);
-    letter-spacing: 0.5px;
-  }
-
   :root.dark {
     & .links {
       text-decoration-color: var(--color-violet-500);
@@ -55,15 +53,11 @@
     section {
       & > div {
         gap: 3rem;
-
-        & div {
-          font-size: var(--text-2xl);
-        }
       }
-    }
 
-    h3 {
-      font-size: var(--text-3xl);
+      .links {
+        font-size: var(--text-2xl);
+      }
     }
   }
 </style>
