@@ -16,8 +16,7 @@
   section {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 56px);
-    padding-top: 1rem;
+    min-height: 100vh;
 
     & > div {
       display: flex;
@@ -54,8 +53,6 @@
 
   @media (min-width: 1024px) {
     section {
-      padding-top: 2rem;
-
       & > div {
         gap: 3rem;
 
