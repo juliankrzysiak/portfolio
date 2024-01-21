@@ -1,4 +1,6 @@
 :root {
+  scroll-behavior: smooth;
+
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -24,6 +26,7 @@
 
   --color-neutral: hsl(210, 40%, 98%);
 }
+
 
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
