@@ -27,7 +27,7 @@ const { title } = Astro.props;
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
         document.documentElement.classList.add('dark');
-        // We set the inner HTML when the user prefers dark mode to remove any FOUC
+        // We set the inner HTML when the user prefers dark mode to remove any FOUC when the SVG changes from its default light mode svg
         const darkModeButton = document.querySelector('.dark-mode-button') as HTMLButtonElement;
         darkModeButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path
