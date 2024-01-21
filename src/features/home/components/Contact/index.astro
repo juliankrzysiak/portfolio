@@ -1,7 +1,7 @@
 <section id='contact'>
   <a href='#contact' class='section-title'>Contact</a>
   <div>
-    <p>jkrzysiak13@gmail.com</p>
+    <h3>jkrzysiak13@gmail.com</h3>
     <div class='links'>
       <a href='https://github.com/CastillejaCode'>GitHub</a>
       <a href='https://www.linkedin.com/in/jkrzysiak'>LinkedIn</a>
@@ -36,16 +36,19 @@
     gap: 2rem;
     text-align: center;
     font-size: var(--text-xl);
-
-    & a {
-      text-decoration: underline var(--color-rose-800);
-    }
+    text-decoration: underline var(--color-rose-800);
   }
 
-  p {
+  h3 {
     align-self: center;
     text-align: center;
     font-size: var(--text-2xl);
+  }
+
+  :root.dark {
+    & .links {
+      text-decoration-color: var(--color-violet-500);
+    }
   }
 
   @media (min-width: 1024px) {

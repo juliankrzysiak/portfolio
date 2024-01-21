@@ -73,6 +73,19 @@ const {
     text-decoration: line-through;
   }
 
+  :root.dark {
+    & article {
+      background-color: var(--color-slate-800);
+    }
+    & img {
+      border-bottom: 0;
+    }
+
+    & a {
+      text-decoration: underline var(--color-primary);
+    }
+  }
+
   @media (min-width: 1024px) {
     h2 {
       margin: 1rem 0;
