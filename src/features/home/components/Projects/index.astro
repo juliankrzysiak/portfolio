@@ -1,6 +1,6 @@
 ---
-import ProjectCard from "./ProjectCard.astro"
-import projects from '../../data/projects'
+import ProjectCard from './ProjectCard.astro';
+import projects from '../../data/projects';
 ---
 
 <section id='projects'>
@@ -21,10 +21,10 @@ import projects from '../../data/projects'
   div {
     display: grid;
     place-content: center;
-    gap: 2rem;
+    gap: 3rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     section {
       gap: 3rem;
       padding: 2rem 0 3rem;

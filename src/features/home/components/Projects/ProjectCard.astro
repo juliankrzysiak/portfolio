@@ -44,8 +44,10 @@ const {
   .info {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
     gap: 1.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 
   h2 {
@@ -88,16 +90,7 @@ const {
 
   @media (min-width: 1024px) {
     h2 {
-      margin: 1rem 0;
-      font-size: var(--text-4xl);
-    }
-
-    .info {
-      padding: 0 2rem 2rem 1.5rem;
-    }
-
-    .image p {
-      font-size: var(--text-lg);
+      font-size: var(--text-3xl);
     }
   }
 </style>
