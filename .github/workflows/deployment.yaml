@@ -1,16 +1,16 @@
 name: Deployment Pipeline
-
 on:
-  push:
-    branches: [main]
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
 
   workflow_dispatch:
 
 jobs:
   deployment:
-    if: |
-        github.event_name == 'push' && 
-        contains(join(toJson(github.event.commits.*.message)), '#skip') != true
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-22.04
     steps:
       - name: Trigger Deployment to CloudFlare Pages
@@ -19,11 +19,14 @@ jobs:
   tag_release:
     needs: deployment
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
         with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
           fetch-depth: '0'
-          
+
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.64.0
         env:
