@@ -9,7 +9,7 @@
   }
 </script>
 
-<div>
+<div class="container">
   {#if visible}
     <p in:fly={{ y: 25, duration: 1300 }} out:fade on:introend={() => (visible = false)}>copied</p>
   {/if}
@@ -42,7 +42,7 @@
 </div>
 
 <style>
-  div {
+  .container {
     position: relative;
     font-size: var(--text-lg);
     text-align: center;
@@ -50,6 +50,12 @@
     padding: 2rem 3rem;
     background-color: var(--color-violet-300);
     border-radius: 0.5rem;
+  }
+
+  :root.dark {
+    & .container {
+      background-color: var(--color-slate-950);
+    }
   }
 
   button {
@@ -67,12 +73,6 @@
     left: 50%;
     top: -2rem;
     transform: translate(-50%);
-  }
-
-  :root.dark {
-    & div {
-      background-color: var(--color-slate-950);
-    }
   }
 
   @media (min-width: 1024px) {
