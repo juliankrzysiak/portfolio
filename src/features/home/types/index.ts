@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   summary: string;
   img: {
-    src: ImageMetadata;
+    src: string;
     alt?: string;
   };
   links: {

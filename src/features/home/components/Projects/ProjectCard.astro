@@ -1,0 +1,97 @@
+---
+import { Image } from 'astro:assets';
+
+const {
+  details: {
+    title,
+    summary,
+    img: { src, alt },
+    links: { website, github },
+  },
+} = Astro.props;
+---
+
+<article>
+  <img src={src} alt={alt ?? 'Preview of website'} />
+  <div class='info'>
+    <div class='words'>
+      <h2>{title}</h2>
+      <p>{summary}</p>
+    </div>
+    <div class='links'>
+      <a href={website}>website</a>
+      <a href={github}> github</a>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    background-color: var(--color-violet-100);
+  }
+
+  img {
+    border-bottom: 1px solid var(--color-slate-300);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .words {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-lg);
+  }
+
+  a {
+    text-decoration: underline var(--color-rose-900);
+  }
+
+  a:not([href]) {
+    text-decoration: line-through;
+  }
+
+  :root.dark {
+    & article {
+      background-color: var(--color-slate-800);
+    }
+    & img {
+      border-bottom: 0;
+    }
+
+    & a {
+      text-decoration: underline var(--color-primary);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: var(--text-3xl);
+    }
+  }
+</style>

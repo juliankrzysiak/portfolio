@@ -1,4 +1,6 @@
 :root {
+  scroll-behavior: smooth;
+
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -11,34 +13,95 @@
   --text-6xl: 3.75rem;
   --text-7xl: 4.25rem;
 
-  --color-primary: hsl(345, 83%, 41%);
-  --color-background: hsl(251, 95%, 92%);
+  --color-slate-50: hsl(210, 40%, 98%);
+  --color-slate-100: hsl(210, 40%, 96%);
+  --color-slate-200: hsl(214, 32%, 91%);
+  --color-slate-300: hsl(213, 27%, 84%);
+  --color-slate-400: hsl(215, 20%, 65%);
+  --color-slate-500: hsl(215, 16%, 47%);
+  --color-slate-600: hsl(215, 19%, 35%);
+  --color-slate-700: hsl(215, 25%, 27%);
+  --color-slate-800: hsl(217, 33%, 17%);
+  --color-slate-900: hsl(222, 47%, 11%);
+  --color-slate-950: hsl(229, 84%, 5%);
 
-  --color-neutral: hsl(222, 47%, 11%);
-  --color-neutral-dark: hsl(222, 47%, 11%);
+
+  --color-rose-50: hsl(356, 100%, 97%);
+  --color-rose-100: hsl(356, 100%, 95%);
+  --color-rose-200: hsl(353, 96%, 90%);
+  --color-rose-300: hsl(353, 96%, 82%);
+  --color-rose-400: hsl(351, 95%, 71%);
+  --color-rose-500: hsl(350, 89%, 60%);
+  --color-rose-600: hsl(347, 77%, 50%);
+  --color-rose-700: hsl(345, 83%, 41%);
+  --color-rose-800: hsl(345, 83%, 41%);
+  --color-rose-900: hsl(342, 75%, 30%);
+  --color-rose-950: hsl(343, 88%, 16%);
+
+  --color-violet-50: hsl(250, 100%, 98%);
+  --color-violet-100: hsl(251, 91%, 95%);
+  --color-violet-200: hsl(251, 95%, 92%);
+  --color-violet-300: hsl(252, 95%, 85%);
+  --color-violet-400: hsl(255, 92%, 76%);
+  --color-violet-500: hsl(255, 92%, 76%);
+  --color-violet-600: hsl(262, 83%, 58%);
+  --color-violet-700: hsl(263, 70%, 50%);
+  --color-violet-800: hsl(263, 69%, 42%);
+  --color-violet-900: hsl(264, 67%, 35%);
+  --color-violet-950: hsl(261, 73%, 23%);
+
+  
+  --color-primary: var(--color-rose-700);
+  --color-background: var(--color-violet-200);
+  --color-neutral: var(--color-slate-900);
 }
 
 :root.dark {
-  --color-primary: hsl(252, 95%, 85%);
-  --color-background: hsl(222, 47%, 11%);
-
-  --color-neutral: hsl(210, 40%, 98%);
+  --color-primary: var(--color-violet-300);
+  --color-background: var(--color-slate-900);
+  --color-neutral: var(--color-slate-200);
 }
 
+
+/* barlow-300 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Lato';
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/barlow-v12-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* lato-700 - latin */
+/* barlow-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Lato';
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/barlow-v12-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/barlow-v12-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../fonts/barlow-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /*

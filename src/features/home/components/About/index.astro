@@ -1,10 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-import selfie from '/src/assets/selfie.jpg';
+import selfie from '../../assets/selfie.jpg';
 ---
 
 <section id='about'>
-  <a href='#about' class="section-title">About</a>
+  <a href='#about' class='section-title'>About</a>
   <div class='info'>
     <div class='person'>
       <Image src={selfie} alt='Selfie of Julian Krzysiak.' />
@@ -62,7 +62,7 @@ import selfie from '/src/assets/selfie.jpg';
     & img {
       border-radius: 100%;
       border-width: 2px;
-      border-color: var(--color-neutral-dark);
+      border-color: var(--color-slate-900);
     }
 
     & div {
@@ -72,6 +72,7 @@ import selfie from '/src/assets/selfie.jpg';
 
   h2 {
     font-size: var(--text-2xl);
+    font-weight: 500;
     color: var(--color-primary);
   }
 
@@ -87,11 +88,6 @@ import selfie from '/src/assets/selfie.jpg';
   }
 
   @media (min-width: 1024px) {
-    section {
-      padding: 0 0 2rem;
-      gap: 0rem;
-    }
-
     a {
       font-size: var(--text-5xl);
     }

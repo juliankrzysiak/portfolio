@@ -14,19 +14,19 @@ const { title } = Astro.props;
     <h2>Full-Stack Web Developer</h2>
   </div>
   <nav>
-    <a href='#about'>Tell me <b>about</b> yourself?</a>
-    <a href='#projects'>What <b>projects</b> have you made?</a>
-    <a href='#contact'>How do I <b>contact</b> you?</a>
+    <a href='#about'>Tell me <strong>about</strong> yourself?</a>
+    <a href='#projects'>What <strong>projects</strong> have you made?</a>
+    <a href='#contact'>How do I <strong>contact</strong> you?</a>
   </nav>
 </section>
 
 <style>
   section {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
-    height: calc(100vh - 64px);
   }
 
   div {
@@ -37,8 +37,10 @@ const { title } = Astro.props;
 
   h1 {
     color: var(--color-primary);
+    letter-spacing: 0.5px;
+    transition: color 0.5s;
     font-size: var(--text-3xl);
-    font-weight: 700;
+    font-weight: 600;
   }
 
   h2 {
@@ -52,13 +54,24 @@ const { title } = Astro.props;
     font-size: var(--text-lg);
   }
 
-  b {
+  strong {
     color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  a:nth-child(1) strong {
+    transition: color 0.5s 0.1s;
+  }
+
+  a:nth-child(2) strong {
+    transition: color 0.5s 0.2s;
+  }
+  a:nth-child(3) strong {
+    transition: color 0.5s 0.3s;
   }
 
   @media (min-width: 1024px) {
     section {
-      height: calc(100vh - 84px);
       gap: 4rem;
     }
 
