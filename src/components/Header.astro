@@ -4,7 +4,7 @@ import DarkModeButton from './DarkModeButton.svelte';
 
 <header>
   <nav>
-    <a href='#'>JK</a>
+    <a href='/'>JK</a>
     <a href='#'>Blog</a>
     <a href='#'>Reviews</a>
   </nav>
@@ -32,6 +32,10 @@ import DarkModeButton from './DarkModeButton.svelte';
 
   a:first-child {
     font-size: var(--text-2xl);
+  }
+
+  a:not(:first-child) {
+    visibility: hidden;
   }
 
   @media (min-width: 1024px) {
