@@ -2,6 +2,7 @@
   import { fade, fly } from 'svelte/transition';
   export let line = 'jkrzysiak13@gmail.com';
   let visible = false;
+
   async function handleClick() {
     await navigator.clipboard.writeText(line);
     visible = true;
@@ -42,11 +43,12 @@
 
 <style>
   div {
+    position: relative;
     font-size: var(--text-lg);
     text-align: center;
     letter-spacing: 0.5px;
     padding: 2rem 3rem;
-    background-color: var(--color-slate-950);
+    background-color: var(--color-violet-300);
     border-radius: 0.5rem;
   }
 
@@ -59,16 +61,18 @@
     color: var(--color-neutral);
   }
 
-  div {
-    position: relative;
-  }
-
   p {
     z-index: -10;
     position: absolute;
     left: 50%;
     top: -2rem;
     transform: translate(-50%);
+  }
+
+  :root.dark {
+    & div {
+      background-color: var(--color-slate-950);
+    }
   }
 
   @media (min-width: 1024px) {
