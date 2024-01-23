@@ -1,0 +1,59 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Post from '@/features/blog/components/Post/index.astro';
+import { getCollection } from 'astro:content';
+
+const title = 'Blog';
+const posts = await getCollection('blog');
+---
+
+<Layout title={title}>
+  <main>
+    <div>
+      <h1>
+        web dev content, mostly
+        <br />
+         updated weekly, probably
+      </h1>
+    </div>
+    <section>
+      <h2>Latest</h2>
+      <ul>
+        {
+          posts.map((post) => {
+            return <Post data={post.data} />;
+          })
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 64rem;
+    padding: 0 2rem;
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 1rem;
+  }
+</style>
