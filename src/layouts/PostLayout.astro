@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
       <h2>{frontmatter.author}</h2>
       <p>{frontmatter.date}</p>
     </section>
-    <div>
+    <div class='prose'>
       <slot />
     </div>
   </main>
@@ -34,12 +34,26 @@ const { frontmatter } = Astro.props;
     line-height: 2.5rem;
     padding-bottom: 1rem;
   }
+
   h2,
   p {
     font-size: var(--text-lg);
   }
 
-  div {
+  .prose {
+  }
+</style>
+
+<style is:global>
+  .prose {
+    width: 100%;
+    max-width: 65ch;
     align-self: center;
+
+    & * {
+      font-size: revert;
+      font-weight: revert;
+      margin: revert;
+    }
   }
 </style>
