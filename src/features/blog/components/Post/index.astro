@@ -1,0 +1,30 @@
+---
+const { title, author, description, date, tags } = Astro.props.data;
+---
+
+<li>
+  <h2>{title}</h2>
+  <p>{description}</p>
+</li>
+
+<style>
+  li {
+    max-width: 42rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    background-color: var(--color-violet-100);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+</style>
