@@ -1,0 +1,49 @@
+---
+import './Layout.astro';
+import Layout from './Layout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <main>
+    <section>
+      <h1>{frontmatter.title}</h1>
+      <h2>{frontmatter.author}</h2>
+      <p>{frontmatter.date}</p>
+    </section>
+    <div>
+      <slot />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    max-width: 64rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: var(--text-4xl);
+    line-height: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+
+  div {
+    align-self: center;
+  }
+</style>
