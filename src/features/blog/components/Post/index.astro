@@ -1,15 +1,22 @@
 ---
-const { title, author, description, date, tags } = Astro.props.data;
+const {
+  url,
+  data: { title, description },
+} = Astro.props;
 ---
 
 <li>
-  <h2>{title}</h2>
+  <h2>
+    <a href={url}>{title}</a>
+  </h2>
   <p>{description}</p>
 </li>
 
 <style>
   li {
-    max-width: 42rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow:
@@ -22,9 +29,11 @@ const { title, author, description, date, tags } = Astro.props.data;
     font-size: var(--text-3xl);
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   p {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    font-weight: 300;
   }
 </style>
