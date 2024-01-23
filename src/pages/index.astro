@@ -9,6 +9,14 @@ const title = 'Julian Krzysiak';
 ---
 
 <Layout title={title}>
+  <link
+    rel='preload'
+    href='fonts/barlow-v12-latin-600.woff2'
+    as='font'
+    type='font/woff2'
+    crossorigin
+    slot='preload'
+  />
   <main>
     <Hero title={title} />
     <About />
