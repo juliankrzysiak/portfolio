@@ -5,7 +5,8 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     author: z.string().default('Julian Krzysiak'),
-    publishDate: z.string(),
+    description: z.string(),
+    date: z.string(),
     tags: z.array(z.string()),
   }),
 });
