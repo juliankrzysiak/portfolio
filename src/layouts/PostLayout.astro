@@ -2,6 +2,10 @@
 import './Layout.astro';
 import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
+const options = {
+  month: 'long',
+  day: 'numeric',
+};
 ---
 
 <Layout title={frontmatter.title}>
@@ -9,7 +13,7 @@ const { frontmatter } = Astro.props;
     <section>
       <h1>{frontmatter.title}</h1>
       <h2>{frontmatter.author}</h2>
-      <p>{frontmatter.date}</p>
+      <p>{frontmatter.date.toLocaleDateString('en-US', options)}</p>
     </section>
     <div class='prose'>
       <slot />

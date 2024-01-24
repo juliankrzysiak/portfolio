@@ -6,7 +6,7 @@ const blogCollection = defineCollection({
     title: z.string(),
     author: z.string().default('Julian Krzysiak'),
     description: z.string(),
-    date: z.string(),
+    date: z.string().transform((str) => new Date(str)),
     tags: z.array(z.string()).optional(),
   }),
 });
