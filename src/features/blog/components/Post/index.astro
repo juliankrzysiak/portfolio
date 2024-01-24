@@ -25,12 +25,18 @@ const {
     background-color: var(--color-violet-100);
   }
 
+  :root.dark {
+    & li {
+      background-color: var(--color-slate-950);
+    }
+  }
+
   h2 {
     font-size: var(--text-3xl);
   }
 
   a {
-    text-decoration: underline;
+    border-bottom: solid 1.5px;
   }
 
   p {
