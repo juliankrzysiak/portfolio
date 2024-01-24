@@ -22,7 +22,7 @@
 
 <button
   class="dark-mode-button"
-  aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+  aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
   on:click={handleClick}
 >
   {#if darkMode}
