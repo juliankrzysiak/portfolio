@@ -16,6 +16,7 @@ const dateOptions = {
       <time datetime={frontmatter.date.toISOString()}
         >{frontmatter.date.toLocaleDateString('en-US', dateOptions)}</time
       >
+      {frontmatter.tags && <p>tags: {frontmatter.tags.join(', ')}</p>}
     </section>
     <div class='prose'>
       <slot />
@@ -42,7 +43,7 @@ const dateOptions = {
   }
 
   h2,
-  p {
+  time {
     font-size: var(--text-lg);
   }
 
@@ -52,6 +53,7 @@ const dateOptions = {
 
 <style is:global>
   .prose {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
     max-width: 65ch;
     align-self: center;
