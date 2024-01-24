@@ -56,7 +56,7 @@
 
   :root.dark {
     & .container {
-      background-color: var(--color-slate-950);
+      background-color: var(--color-slate-800);
     }
   }
 
