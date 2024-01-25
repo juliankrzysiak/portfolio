@@ -1,8 +1,6 @@
 name: Deployment Pipeline
+
 on:
-  push:
-    branches:
-      - main
   pull_request:
     types:
       - closed
@@ -13,6 +11,7 @@ on:
 
 jobs:
   deployment:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-22.04
     steps:
       - name: Trigger Deployment to CloudFlare Pages
