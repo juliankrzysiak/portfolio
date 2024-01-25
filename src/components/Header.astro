@@ -1,17 +1,22 @@
 ---
 import DarkModeButton from './DarkModeButton.svelte';
+const pathName = Astro.url.pathname.split('/').at(1);
 ---
 
 <header>
   <nav>
-    <a href='/'>JK</a>
-    <a href='#'>Blog</a>
-    <a href='#'>Reviews</a>
+    <a href='/' class={`${!pathName && 'active'}`}>JK</a>
+    <a href='/blog' class={`${pathName === 'blog' && 'active'}`}>Blog</a>
+    <a href='#' class={`${pathName === 'reviews' && 'active'}`}>Reviews</a>
   </nav>
   <DarkModeButton client:load='svelte' />
 </header>
 
 <style>
+  .active {
+    border-bottom: solid 1px;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -32,10 +37,6 @@ import DarkModeButton from './DarkModeButton.svelte';
 
   a:first-child {
     font-size: var(--text-2xl);
-  }
-
-  a:not(:first-child) {
-    visibility: hidden;
   }
 
   @media (min-width: 1024px) {

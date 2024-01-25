@@ -11,8 +11,10 @@
     "pretty": "prettier --write ./src"
   },
   "dependencies": {
+    "@astrojs/mdx": "^2.0.6",
     "@astrojs/svelte": "^5.0.3",
-    "astro": "^3.0.7",
+    "astro": "^4.2.1",
+    "mdx": "^0.3.1",
     "sharp": "^0.32.5",
     "svelte": "^4.2.8"
   },

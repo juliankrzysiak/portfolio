@@ -44,17 +44,19 @@
 <style>
   .container {
     position: relative;
+    width: 100%;
+    max-width: 20rem;
+    padding: 2rem 0rem;
     font-size: var(--text-lg);
     text-align: center;
     letter-spacing: 0.5px;
-    padding: 2rem 3rem;
-    background-color: var(--color-violet-300);
     border-radius: 0.5rem;
+    background-color: var(--color-violet-300);
   }
 
   :root.dark {
     & .container {
-      background-color: var(--color-slate-950);
+      background-color: var(--color-slate-800);
     }
   }
 

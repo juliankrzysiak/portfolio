@@ -1,0 +1,82 @@
+---
+title: From Tailwind to Vanilla
+author: Julian Krzysiak
+date: 1-24-24
+description: I converted my website's styling from Tailwind to Vanilla CSS
+tags: ['tailwind', 'css']
+---
+
+My first blog post, go me. Anyways...
+
+### Journey
+
+I have been coding for around a year now, and as time went on I gradually "upgraded" my
+implementation of CSS by utilizing TailWind CSS. It seemed a natural progression as I hopped onto
+the React bandwagon - utility classes that can be used in reusable components all based in
+professional scales and systems.
+
+I typed away in classNames with ease, inundating my html with "flex" and "justify between", throwing
+together designs in short spurts of click clacking. Why did I need to design everything upfront when
+it took such little effort to design?
+
+Gliding along, I certainly made projects look presentable (probably), but a creeping suspicion
+caught up with me: had I just been putting off my learning of CSS for ease and comfort?
+
+It was around this time that I had been just getting the hang of Typescript and React, and I wanted
+to learn more. What else could I learn? Instead of looking forward to something new on the
+ever-expanding labyrinthine state of web development, perhaps it was best to look to the past, back
+to the basics. I could easily write out some Javascipt, sure, but why did it work, and how?
+
+I have read and am reading a couple of resources on JS itself. I wanted to take a deep dive, but
+perhaps it was better to get a grasp of the lay of the land before plunging in.
+
+[JavaScript for impatient programmers](https://exploringjs.com/) was an excellent book for this
+purpose, and I learned many tidbits and core features that have oriented my JS coding with more
+understanding and depth. Currently, I am taking notes on
+[You Don't Know JS](https://github.com/getify/You-Dont-Know-JS), which takes a more thorough look
+into the pillars of JS. Although I have been a bit stymied in deciding whether to type out the notes
+or write them out in my illegible cursive. That could be another topic I write about, take note of
+it dear reader, pun intended.
+
+Anyway, looking to master the fundamentals of web development, my gaze also fell upon the noble CSS.
+I was become doubly interested since the hosts of [Syntax.fm](https://syntax.fm/) have been
+extolling the recent upgrades CSS has received, such as container queries, :has(), and more. Brevity
+is the soul of coding; decreasing the number of unnecessary dependencies while mastering CSS and not
+being dependent on abstractions, now this would be useful for my development.
+
+### Website
+
+In this spirit, I decided to start this train of thought by converting my personal website's CSS
+from tailwind to vanilla (no, not even SASS). This process truly exposed how lacking my CSS skills
+were. One of the main qualms those beginning Tailwind have is the need to memorize all the utility
+classes and what they map to. In a humorous reversal, I had trouble remembering what the original
+properties were and what tailwind classes they mapped to. Thankfully, this process wasn't too hard
+since my editor would explain the property on hover for each class.
+
+As the html shone through and the style tags grew anew, I realized that it took roughly the same
+amount of time writing using either methodology, since the editor's autocomplete finished off
+everything.
+
+Also, I did not have to worry much about the dreaded pitfall all coders run into sooner or later,
+naming things, since [Astro](https://astro.build/), the framework I used, automatically encouraged
+CSS modules, which made the shock less virulent.
+
+Furthermore, I actually had a really fun time trying to condense CSS by using selectors,
+pseduo-classes, and pseudo-elements. Imagine my face as I learned one can simply select which child
+one wants to style rather than having to rewrite the whole CSS for each individual element, shook I
+tell you.
+
+Perhaps the point of greatest friction was trying to implement guiding design systems. I deliberated
+back and forth, but in the end I just converted what Tailwind had and turned those into a set of CSS
+variables, particularly for font sizing and colors. Using these variables with a great
+[VS Code extension](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables)
+that automatically suggests them, it was a breeze utilizing system-wide standards.
+
+And thus, with a bit more screwing up and fixing up, I had converted and even improved the design of
+my website. I am proud of how it turned out.
+
+### Conclusion
+
+I relearned many things about CSS I had forgotten and learned many things too in the process of
+redesigning my website. In the future I will try to stick with vanilla CSS and learn even more about
+it. I had a fun time; now I can implement this into larger projects of mine.

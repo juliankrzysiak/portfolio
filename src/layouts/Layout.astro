@@ -1,6 +1,8 @@
 ---
 import Footer from '@/components/Footer.astro';
 import Header from '@/components/Header.astro';
+import { ViewTransitions } from 'astro:transitions';
+
 import '../styles/global.css';
 
 interface Props {
@@ -20,8 +22,24 @@ const { title } = Astro.props;
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
     <link rel='manifest' href='/site.webmanifest' />
+    <link
+      rel='preload'
+      href='/fonts/barlow-v12-latin-regular.woff2'
+      as='font'
+      type='font/woff2'
+      crossorigin
+    />
+    <slot name='preload' />
     <meta name='generator' content={Astro.generator} />
     <script>
+      document.addEventListener('astro:after-swap', () => {
+        if (
+          localStorage.theme === 'dark' ||
+          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark');
+        }
+      });
       if (
         localStorage.theme === 'dark' ||
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -40,18 +58,22 @@ const { title } = Astro.props;
       }
     </script>
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Header />
     <slot />
     <Footer />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        font-family: Barlow;
+        color: var(--color-neutral);
+        background-color: var(--color-background);
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  body {
-    font-family: Barlow;
-    color: var(--color-neutral);
-    background-color: var(--color-background);
-  }
-</style>
