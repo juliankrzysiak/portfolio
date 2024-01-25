@@ -14,7 +14,7 @@ const pathName = Astro.url.pathname.split('/').at(1);
 
 <style>
   .active {
-    border-bottom: solid 1px;
+    border-color: inherit;
   }
 
   header {
@@ -33,6 +33,11 @@ const pathName = Astro.url.pathname.split('/').at(1);
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
+  }
+
+  a {
+    border-bottom: solid 1px;
+    border-color: transparent;
   }
 
   a:first-child {
