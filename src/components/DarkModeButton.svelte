@@ -28,14 +28,14 @@
 </button>
 
 <style>
-  button {
+  .dark-mode-button {
     height: 1.5rem;
     aspect-ratio: 1;
     background-image: url('../assets/moon.svg');
   }
 
   :root.dark {
-    & button {
+    & .dark-mode-button {
       background-image: url('../assets/sun.svg');
     }
   }
