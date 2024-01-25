@@ -1,5 +1,8 @@
 name: Deployment Pipeline
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types:
       - closed
