@@ -11,6 +11,18 @@ const blogCollection = defineCollection({
   }),
 });
 
+const reviewsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    author: z.string(),
+    date: z.string().transform((str) => new Date(str)),
+    category: z.string(),
+    rating: z.number(),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
+  reviews: reviewsCollection,
 };
