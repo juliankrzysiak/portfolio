@@ -1,0 +1,70 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Post from '@/features/blog/components/Post/index.astro';
+import { getCollection } from 'astro:content';
+
+const title = 'Blog';
+const reviews = await getCollection('reviews');
+
+// const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 5);
+---
+
+<Layout title={title}>
+  <main>
+    <div>
+      <p>web dev content, mostly</p>
+      <p>updated weekly, probably</p>
+    </div>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Posted</th>
+            <th>Category</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            reviews.map((review) => {
+              return (
+                <tr>
+                  <th>{review.data.title}</th>
+                  <th>{review.data.author}</th>
+                  <th>{review.data.date.toLocaleDateString('en-us')}</th>
+                  <th>{review.data.category}</th>
+                  <th>{review.data.rating}</th>
+                </tr>
+              );
+            })
+          }
+        </tbody>
+      </table>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 0.25rem;
+  }
+
+  table {
+    display: grid;
+  }
+</style>
