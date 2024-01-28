@@ -1,0 +1,11 @@
+---
+const { title, author, date, category, rating } = Astro.props.data;
+---
+
+<tr>
+  <td>{title}</td>
+  <td>{author}</td>
+  <td>{date.toLocaleDateString('en-us')}</td>
+  <td>{category}</td>
+  <td>{rating}</td>
+</tr>
