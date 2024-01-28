@@ -17,6 +17,7 @@ const reviews = await getCollection('reviews');
     </div>
     <section>
       <table>
+        <caption>All Reviews</caption>
         <thead>
           <tr>
             <th>Title</th>
@@ -31,11 +32,11 @@ const reviews = await getCollection('reviews');
             reviews.map((review) => {
               return (
                 <tr>
-                  <th>{review.data.title}</th>
-                  <th>{review.data.author}</th>
-                  <th>{review.data.date.toLocaleDateString('en-us')}</th>
-                  <th>{review.data.category}</th>
-                  <th>{review.data.rating}</th>
+                  <td>{review.data.title}</td>
+                  <td>{review.data.author}</td>
+                  <td>{review.data.date.toLocaleDateString('en-us')}</td>
+                  <td>{review.data.category}</td>
+                  <td>{review.data.rating}</td>
                 </tr>
               );
             })
@@ -64,7 +65,12 @@ const reviews = await getCollection('reviews');
     gap: 0.25rem;
   }
 
-  table {
-    display: grid;
+  th,
+  td {
+    padding: 0.25rem 1rem;
+  }
+
+  td {
+    text-align: center;
   }
 </style>
