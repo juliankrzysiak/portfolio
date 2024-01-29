@@ -1,76 +1,29 @@
 ---
-import Layout from '@/layouts/Layout.astro';
 import Post from '@/features/blog/components/Post/index.astro';
+import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Blog';
 const reviews = await getCollection('reviews');
 
-// const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 5);
+const latestReviews = reviews
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 5);
 ---
 
-<Layout title={title}>
-  <main>
-    <div>
-      <p>web dev content, mostly</p>
-      <p>updated weekly, probably</p>
-    </div>
-    <section>
-      <table>
-        <caption>All Reviews</caption>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Posted</th>
-            <th>Category</th>
-            <th>Rating</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            reviews.map((review) => {
-              return (
-                <tr>
-                  <td>{review.data.title}</td>
-                  <td>{review.data.author}</td>
-                  <td>{review.data.date.toLocaleDateString('en-us')}</td>
-                  <td>{review.data.category}</td>
-                  <td>{review.data.rating}</td>
-                </tr>
-              );
-            })
-          }
-        </tbody>
-      </table>
-    </section>
-  </main>
-</Layout>
+<ContentLayout title={title}>
+  <section>
+    <h2>Latest</h2>
+    <ol>
+      {
+        latestReviews.map((post) => {
+          return <Post url={`/blog/${post.slug}`} data={post.data} />;
+        })
+      }
+    </ol>
+  </section>
+</ContentLayout>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    margin: 0 auto;
-    padding: 0 3rem;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-    gap: 0.25rem;
-  }
-
-  th,
-  td {
-    padding: 0.25rem 1rem;
-  }
-
-  td {
-    text-align: center;
-  }
+  
 </style>

@@ -1,6 +1,6 @@
 ---
-import Layout from '@/layouts/Layout.astro';
 import Post from '@/features/blog/components/Post/index.astro';
+import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Blog';
@@ -8,43 +8,20 @@ const posts = await getCollection('blog');
 const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 5);
 ---
 
-<Layout title={title}>
-  <main>
-    <div>
-      <p>web dev content, mostly</p>
-      <p>updated weekly, probably</p>
-    </div>
-    <section>
-      <h2>Latest</h2>
-      <ol>
-        {
-          latestPosts.map((post) => {
-            return <Post url={`/blog/${post.slug}`} data={post.data} />;
-          })
-        }
-      </ol>
-    </section>
-  </main>
-</Layout>
+<ContentLayout title={title}>
+  <section>
+    <h2>Latest</h2>
+    <ol>
+      {
+        latestPosts.map((post) => {
+          return <Post url={`/blog/${post.slug}`} data={post.data} />;
+        })
+      }
+    </ol>
+  </section>
+</ContentLayout>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    margin: 0 auto;
-    padding: 0 3rem;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-    gap: 0.25rem;
-  }
-
   section {
     display: flex;
     flex-direction: column;
