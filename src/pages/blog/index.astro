@@ -14,7 +14,13 @@ const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
     <ol>
       {
         latestPosts.map((post) => {
-          return <Post url={`/blog/${post.slug}`} data={post.data} />;
+          return (
+            <Post
+              url={`/blog/${post.slug}`}
+              title={post.data.title}
+              description={post.data.description}
+            />
+          );
         })
       }
     </ol>

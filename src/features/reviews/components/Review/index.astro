@@ -1,10 +1,12 @@
 ---
 import Card from '@/components/Card.astro';
-const { url, title, description } = Astro.props;
+const { title, author, url } = Astro.props.data;
 ---
 
 <Card title={title} url={url}>
-  <p>{description}</p>
+  <p>
+    {author}
+  </p>
 </Card>
 
 <style>
