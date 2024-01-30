@@ -18,9 +18,9 @@ const dateOptions = {
       >
       {frontmatter.tags && <p>tags: {frontmatter.tags.join(', ')}</p>}
     </section>
-    <div class='prose'>
+    <section class='prose'>
       <slot />
-    </div>
+    </section>
   </main>
 </Layout>
 

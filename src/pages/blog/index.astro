@@ -1,6 +1,6 @@
 ---
 import Post from '@/features/blog/components/Post/index.astro';
-import ContentLayout from '@/layouts/ContentLayout.astro';
+import CardLayout from '@/layouts/CardLayout.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Blog';
@@ -8,7 +8,7 @@ const posts = await getCollection('blog');
 const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
-<ContentLayout title={title}>
+<CardLayout title={title}>
   <Fragment slot='info'>
     <p>web dev content, mostly</p>
     <p>updated weekly, probably</p>
@@ -24,4 +24,4 @@ const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
       );
     })
   }
-</ContentLayout>
+</CardLayout>

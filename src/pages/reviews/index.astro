@@ -1,6 +1,6 @@
 ---
 import Review from '@/features/reviews/components/Review/index.astro';
-import ContentLayout from '@/layouts/ContentLayout.astro';
+import CardLayout from '@/layouts/CardLayout.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Blog';
@@ -9,7 +9,7 @@ const reviews = await getCollection('reviews');
 const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
-<ContentLayout title={title}>
+<CardLayout title={title}>
   <p slot='info'>my thoughts on stuff I've consumed</p>
   {
     latestReviews.map((review) => {
@@ -23,4 +23,4 @@ const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date
       );
     })
   }
-</ContentLayout>
+</CardLayout>
