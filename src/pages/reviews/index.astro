@@ -12,8 +12,15 @@ const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date
 <ContentLayout title={title}>
   <p slot='info'>my thoughts on stuff I've consumed</p>
   {
-    latestReviews.map((post) => {
-      return <Review url={`/blog/${post.slug}`} data={post.data} />;
+    latestReviews.map((review) => {
+      return (
+        <Review
+          url={`/blog/${review.slug}`}
+          title={review.data.title}
+          author={review.data.author}
+          category={review.data.category}
+        />
+      );
     })
   }
 </ContentLayout>
