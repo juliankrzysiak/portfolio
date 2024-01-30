@@ -7,7 +7,7 @@ const pathName = Astro.url.pathname.split('/').at(1);
   <nav>
     <a href='/' class={`${!pathName && 'active'}`}>JK</a>
     <a href='/blog' class={`${pathName === 'blog' && 'active'}`}>Blog</a>
-    <a href='reviews' class={`${pathName === 'reviews' && 'active'}`}>Reviews</a>
+    <a href='/reviews' class={`${pathName === 'reviews' && 'active'}`}>Reviews</a>
   </nav>
   <DarkModeButton client:load='svelte' />
 </header>
