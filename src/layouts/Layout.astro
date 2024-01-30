@@ -32,6 +32,7 @@ const { title } = Astro.props;
     />
     <slot name='preload' />
     <script is:inline>
+      // Necessary for view transitions
       document.addEventListener('astro:after-swap', () => {
         if (
           localStorage.theme === 'dark' ||
@@ -65,6 +66,9 @@ const { title } = Astro.props;
         font-family: Barlow;
         color: var(--color-neutral);
         background-color: var(--color-background);
+        transition:
+          color 0.3s,
+          background-color 0.3s;
       }
     </style>
   </body>
