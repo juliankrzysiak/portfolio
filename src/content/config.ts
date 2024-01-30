@@ -19,6 +19,7 @@ const reviewsCollection = defineCollection({
     date: z.string().transform((str) => new Date(str)),
     category: z.string(),
     rating: z.number(),
+    link: z.string(),
   }),
 });
 
