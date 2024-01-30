@@ -1,29 +1,18 @@
 ---
-import Post from '@/features/blog/components/Post/index.astro';
+import Review from '@/features/reviews/components/Review/index.astro';
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Blog';
 const reviews = await getCollection('reviews');
 
-const latestReviews = reviews
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 5);
+const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <ContentLayout title={title}>
-  <section>
-    <h2>Latest</h2>
-    <ol>
-      {
-        latestReviews.map((post) => {
-          return <Post url={`/blog/${post.slug}`} data={post.data} />;
-        })
-      }
-    </ol>
-  </section>
+  {
+    latestReviews.map((post) => {
+      return <Review url={`/blog/${post.slug}`} data={post.data} />;
+    })
+  }
 </ContentLayout>
-
-<style>
-  
-</style>
