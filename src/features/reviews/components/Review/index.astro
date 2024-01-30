@@ -1,0 +1,26 @@
+---
+import Card from '@/components/Card.astro';
+const { title, author, category, url } = Astro.props;
+---
+
+<Card title={title} url={url}>
+  <div>
+    <p>
+      {author}
+    </p>
+    <p>
+      {category}
+    </p>
+  </div>
+</Card>
+
+<style>
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    font-weight: 300;
+  }
+</style>

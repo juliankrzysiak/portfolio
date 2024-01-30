@@ -3,11 +3,11 @@ import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const reviews = await getCollection('reviews');
 
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { entry: post },
+  return reviews.map((review) => ({
+    params: { slug: review.slug },
+    props: { entry: review },
   }));
 }
 
@@ -16,18 +16,19 @@ const dateOptions = {
   day: 'numeric',
   year: 'numeric',
 };
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, author, date, tags } = Astro.props.entry.data;
+const { title, author, date, category, rating, link } = Astro.props.entry.data;
 ---
 
 <ContentLayout title={title}>
   <div slot='info'>
     <h2>Author: {author}</h2>
-    <time datetime={date.toISOString()}
-      >Published: {date.toLocaleDateString('en-US', dateOptions)}</time
-    >
-    {tags && <p>Tags: {tags.join(', ')}</p>}
+    <time datetime={date.toISOString()}>Date: {date.toLocaleDateString('en-US', dateOptions)}</time>
+    <p>Category: {category}</p>
+    <p>Rating: {rating} / 5</p>
+    <a href={link}>Link to buy (not affiliate)</a>
   </div>
   <Content />
 </ContentLayout>
@@ -38,5 +39,10 @@ const { title, author, date, tags } = Astro.props.entry.data;
     flex-direction: column;
     gap: 0.25rem;
     font-size: var(--text-lg);
+  }
+
+  a {
+    text-decoration: revert;
+    width: fit-content;
   }
 </style>

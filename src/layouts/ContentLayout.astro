@@ -1,26 +1,18 @@
 ---
 import './Layout.astro';
 import Layout from './Layout.astro';
-const { frontmatter } = Astro.props;
-const dateOptions = {
-  month: 'long',
-  day: 'numeric',
-};
+const { title } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={title}>
   <main>
     <section>
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.author}</h2>
-      <time datetime={frontmatter.date.toISOString()}
-        >{frontmatter.date.toLocaleDateString('en-US', dateOptions)}</time
-      >
-      {frontmatter.tags && <p>tags: {frontmatter.tags.join(', ')}</p>}
+      <h1>{title}</h1>
+      <slot name='info' />
     </section>
-    <div class='prose'>
+    <section class='prose'>
       <slot />
-    </div>
+    </section>
   </main>
 </Layout>
 
@@ -41,14 +33,6 @@ const dateOptions = {
     line-height: 2.5rem;
     padding-bottom: 1rem;
   }
-
-  h2,
-  time {
-    font-size: var(--text-lg);
-  }
-
-  .prose {
-  }
 </style>
 
 <style is:global>
@@ -62,6 +46,7 @@ const dateOptions = {
       font-size: revert;
       font-weight: revert;
       margin: revert;
+      text-decoration: revert;
     }
   }
 </style>

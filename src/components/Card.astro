@@ -1,0 +1,38 @@
+---
+const { url, title } = Astro.props;
+---
+
+<li>
+  <h2>
+    <a href={url}>{title}</a>
+  </h2>
+  <slot />
+</li>
+
+<style>
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    background-color: var(--color-violet-100);
+  }
+
+  :root.dark {
+    & li {
+      background-color: var(--color-slate-800);
+    }
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  a {
+    border-bottom: solid 1.5px;
+  }
+</style>

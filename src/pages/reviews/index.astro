@@ -1,0 +1,26 @@
+---
+import Review from '@/features/reviews/components/Review/index.astro';
+import CardLayout from '@/layouts/CardLayout.astro';
+import { getCollection } from 'astro:content';
+
+const title = 'Reviews';
+const reviews = await getCollection('reviews');
+
+const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<CardLayout title={title}>
+  <p slot='info'>my thoughts on stuff I've consumed</p>
+  {
+    latestReviews.map((review) => {
+      return (
+        <Review
+          url={`/reviews/${review.slug}`}
+          title={review.data.title}
+          author={review.data.author}
+          category={review.data.category}
+        />
+      );
+    })
+  }
+</CardLayout>

@@ -7,14 +7,14 @@ const pathName = Astro.url.pathname.split('/').at(1);
   <nav>
     <a href='/' class={`${!pathName && 'active'}`}>JK</a>
     <a href='/blog' class={`${pathName === 'blog' && 'active'}`}>Blog</a>
-    <a href='#' class={`${pathName === 'reviews' && 'active'}`}>Reviews</a>
+    <a href='/reviews' class={`${pathName === 'reviews' && 'active'}`}>Reviews</a>
   </nav>
   <DarkModeButton client:load='svelte' />
 </header>
 
 <style>
   .active {
-    border-bottom: solid 1px;
+    border-color: inherit;
   }
 
   header {
@@ -33,6 +33,11 @@ const pathName = Astro.url.pathname.split('/').at(1);
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
+  }
+
+  a {
+    border-bottom: solid 1px;
+    border-color: transparent;
   }
 
   a:first-child {

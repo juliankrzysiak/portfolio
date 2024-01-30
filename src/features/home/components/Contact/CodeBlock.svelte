@@ -47,7 +47,7 @@
     width: 100%;
     max-width: 20rem;
     padding: 2rem 0rem;
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     text-align: center;
     letter-spacing: 0.5px;
     border-radius: 0.5rem;
