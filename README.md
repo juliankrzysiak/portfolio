@@ -15,10 +15,10 @@
     <img src="./public/android-chrome-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Portfolio</h3>
+<h3 align="center">Julian's Website</h3>
 
   <p align="center">
-    My portfolio website for showcasing my projects, who I am, and my contact information.
+    My personal website for showcasing my portfolio, blog, and reviews.
     <br />
     <br />
     <a href="https://github.com/CastillejaCode/portfolio">View Demo</a>
@@ -33,7 +33,7 @@
 ## About The Project
 Desktop Light             |  Mobile Dark
 -------------------------|-------------------------
-<img src="https://imgur.com/hTUM4Tr.png" alt="Desktop screenshot">  |  <img src="https://imgur.com/Ty8uquZ.png" alt="Mobile screenshot">
+<img src="https://imgur.com/K2BOqyC.png" alt="Desktop screenshot">  |  <img src="https://imgur.com/OnGw1Xd.png" alt="Mobile screenshot">
 
 ### Built With
 
@@ -42,7 +42,7 @@ Desktop Light             |  Mobile Dark
 </a> 
 <br/>
 <a href="https://tailwindcss.com/">  
-<img alt="Tailwind Css Static Badge" src="https://img.shields.io/badge/Tailwind%20CSS-2A233E?style=for-the-badge&logo=tailwindcss&logoColor=0EA5E9&color=%230f172a" height="50">
+<img alt="Svelte Static Badge" src="https://img.shields.io/badge/Svelte-2A233E?style=for-the-badge&logo=svelte&logoColor=ff3e00&color=2e2e2e" height="50">
 </a>
 
 ### How It's Made
@@ -50,14 +50,18 @@ Desktop Light             |  Mobile Dark
 I wanted to build a simple one-page personal website, and with each new project, I might as well learn something new.
 
 So I picked Astro, a framework utilizing static site generation, which was the perfect use case for me; a small, fast, simple website.
-The development process was enjoyable, and due to the intentional lack of JavaScript (the only JS I have is for controlling the light/dark mode), the creation was quick as well as the loading times.   
+
+The development process was enjoyable, and I tried to use as little Javascript as possible. The only two instances where I have it is for controlling light/dark mode and copying my email to the clipboard. 
+I implemented both of these using Svelte since I wanted to practice using it after learning about it recently. 
 
 ### Optimizations
 
 Using static site generation makes the website pretty fast already. The included images are also optimized by Astro. 
 
-Designing the whole website for both mobile and desktop, in both light and dark mode, was very beneficial. I can mess up and develop the design much faster in Figma,
+Designing the whole website ahead of time, for both mobile and desktop, in both light and dark mode, was very beneficial. I can mess up and develop the design much faster in Figma,
 and then I just have to copy the design over. The design is also more coherent and clean. 
+
+Initially I styled the whole website in Tailwind CSS, but I decided to convert everything to vanilla CSS since I felt like I was getting rusty with the fundamentals. 
 
 Also, I had to change some things to be more accessible; I would rather have a more accessible website than a more aesthetic website (but you can certainly have both!). 
 I was going to add some superfluous animations and the like, but at the end of the day, this website is just for information.
@@ -69,8 +73,10 @@ I was going to add some superfluous animations and the like, but at the end of t
 |----------------------------------------|------------------------------------------------------|----------|
 | New framework was easy to implement    | Config for prettier and Astro was confusing at first |          |
 | Designing beforehand, not while coding | Figuring out dark mode logic                         |          |
-| Added dark mode                        |                                                      |          |
+| Added dark mode                        | Converting Tailwind to vanilla CSS                                                      |          |
 | Responsive design                      |                                                      |          |
+| Learning vanilla CSS again               |                                                      |          |
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -100,7 +106,8 @@ If you want to get a local copy running for some reason, here you go.
    ```
  4. Switch out my info for yours
 
-    For projects, you can just replace the array with your project objects, and they will be automatically created
+    For projects, you can just replace the array with your project objects, and they will be automatically created.
+    You can also add any blog posts or reviews easily due to the content collection schema. 
 
 
 
