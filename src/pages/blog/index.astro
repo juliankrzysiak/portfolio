@@ -9,6 +9,10 @@ const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
 ---
 
 <ContentLayout title={title}>
+  <Fragment slot='info'>
+    <p>web dev content, mostly</p>
+    <p>updated weekly, probably</p>
+  </Fragment>
   {
     latestPosts.map((post) => {
       return (

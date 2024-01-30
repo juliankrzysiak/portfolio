@@ -6,8 +6,7 @@ const { title } = Astro.props;
 <Layout title={title}>
   <main>
     <div>
-      <p>web dev content, mostly</p>
-      <p>updated weekly, probably</p>
+      <slot name='info' />
     </div>
     <section>
       <ol>
