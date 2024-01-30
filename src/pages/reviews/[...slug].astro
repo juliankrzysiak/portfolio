@@ -1,5 +1,5 @@
 ---
-import PostLayout from '@/layouts/PostLayout.astro';
+import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -11,10 +11,38 @@ export async function getStaticPaths() {
   }));
 }
 
+const dateOptions = {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+};
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const { title, author, date, category, rating, link } = Astro.props.entry.data;
 ---
 
-<PostLayout frontmatter={entry.data}>
+<ContentLayout title={title}>
+  <div slot='info'>
+    <h2>Author: {author}</h2>
+    <time datetime={date.toISOString()}>Date: {date.toLocaleDateString('en-US', dateOptions)}</time>
+    <p>Category: {category}</p>
+    <p>Rating: {rating} / 5</p>
+    <a href={link}>Link to buy (not affiliate)</a>
+  </div>
   <Content />
-</PostLayout>
+</ContentLayout>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: var(--text-lg);
+  }
+
+  a {
+    text-decoration: revert;
+    width: fit-content;
+  }
+</style>

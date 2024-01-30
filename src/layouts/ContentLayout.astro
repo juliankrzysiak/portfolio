@@ -1,0 +1,52 @@
+---
+import './Layout.astro';
+import Layout from './Layout.astro';
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <main>
+    <section>
+      <h1>{title}</h1>
+      <slot name='info' />
+    </section>
+    <section class='prose'>
+      <slot />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    max-width: 64rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: var(--text-4xl);
+    line-height: 2.5rem;
+    padding-bottom: 1rem;
+  }
+</style>
+
+<style is:global>
+  .prose {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    max-width: 65ch;
+    align-self: center;
+
+    & * {
+      font-size: revert;
+      font-weight: revert;
+      margin: revert;
+      text-decoration: revert;
+    }
+  }
+</style>

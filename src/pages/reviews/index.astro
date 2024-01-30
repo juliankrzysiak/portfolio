@@ -3,7 +3,7 @@ import Review from '@/features/reviews/components/Review/index.astro';
 import CardLayout from '@/layouts/CardLayout.astro';
 import { getCollection } from 'astro:content';
 
-const title = 'Blog';
+const title = 'Reviews';
 const reviews = await getCollection('reviews');
 
 const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
@@ -15,7 +15,7 @@ const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date
     latestReviews.map((review) => {
       return (
         <Review
-          url={`/blog/${review.slug}`}
+          url={`/reviews/${review.slug}`}
           title={review.data.title}
           author={review.data.author}
           category={review.data.category}
