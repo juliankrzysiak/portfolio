@@ -10,7 +10,7 @@ const reviews = await getCollection('reviews');
 const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
-<CardLayout title={title}>
+<CardLayout title={title} description={description}>
   <p slot='info'>{description}</p>
   {
     latestReviews.map((review) => {
