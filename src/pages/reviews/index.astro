@@ -4,13 +4,14 @@ import CardLayout from '@/layouts/CardLayout.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Reviews';
+const description = "My thoughts on things I've consumed.";
 const reviews = await getCollection('reviews');
 
 const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <CardLayout title={title}>
-  <p slot='info'>my thoughts on stuff I've consumed</p>
+  <p slot='info'>{description}</p>
   {
     latestReviews.map((review) => {
       return (

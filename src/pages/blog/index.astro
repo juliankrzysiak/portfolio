@@ -4,14 +4,15 @@ import CardLayout from '@/layouts/CardLayout.astro';
 import { getCollection } from 'astro:content';
 
 const title = 'Blog';
+const description = 'Web dev content, mostly. Updated weekly, probably.';
 const posts = await getCollection('blog');
 const latestPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
-<CardLayout title={title}>
+<CardLayout title={title} description={description}>
   <Fragment slot='info'>
-    <p>web dev content, mostly</p>
-    <p>updated weekly, probably</p>
+    <p>Web dev content, mostly.</p>
+    <p>Updated weekly, probably.</p>
   </Fragment>
   {
     latestPosts.map((post) => {
