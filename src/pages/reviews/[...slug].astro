@@ -11,21 +11,23 @@ export async function getStaticPaths() {
   }));
 }
 
-const dateOptions = {
-  month: 'long',
-  day: 'numeric',
-  year: 'numeric',
-};
-
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, author, date, category, rating, link } = Astro.props.entry.data;
+const { title, author, date, category, rating, link, description } = Astro.props.entry.data;
 ---
 
-<ContentLayout title={title}>
+<ContentLayout title={title} description={description}>
   <div slot='info'>
     <h2>Author: {author}</h2>
-    <time datetime={date.toISOString()}>Date: {date.toLocaleDateString('en-US', dateOptions)}</time>
+    <time datetime={date.toISOString()}
+      >Date: {
+        new Intl.DateTimeFormat('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        }).format(date)
+      }</time
+    >
     <p>Category: {category}</p>
     <p>Rating: {rating} / 5</p>
     <a href={link}>Link to buy (not affiliate)</a>

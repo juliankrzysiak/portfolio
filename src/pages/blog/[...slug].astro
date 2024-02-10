@@ -18,14 +18,20 @@ const dateOptions = {
 };
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, author, date, tags } = Astro.props.entry.data;
+const { title, author, date, tags, description } = Astro.props.entry.data;
 ---
 
-<ContentLayout title={title}>
+<ContentLayout title={title} description={description}>
   <div slot='info'>
     <h2>Author: {author}</h2>
     <time datetime={date.toISOString()}
-      >Published: {date.toLocaleDateString('en-US', dateOptions)}</time
+      >Published: {
+        new Intl.DateTimeFormat('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        }).format(date)
+      }</time
     >
     {tags && <p>Tags: {tags.join(', ')}</p>}
   </div>
