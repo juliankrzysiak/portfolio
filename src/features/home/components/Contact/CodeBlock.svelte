@@ -47,7 +47,7 @@
     width: 100%;
     max-width: 20rem;
     padding: 2rem 0rem;
-    font-size: var(--text-base);
+    font-size: clamp(var(--text-sm), 4vw, var(--text-xl));
     text-align: center;
     letter-spacing: 0.5px;
     border-radius: 0.5rem;
@@ -73,11 +73,5 @@
     left: 50%;
     top: -2rem;
     transform: translate(-50%);
-  }
-
-  @media (min-width: 1024px) {
-    code {
-      font-size: var(--text-xl);
-    }
   }
 </style>
