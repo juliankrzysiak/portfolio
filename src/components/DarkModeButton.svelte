@@ -10,7 +10,7 @@
   });
 
   function handleClick() {
-    body.style.transition = 'color .3s, background-color .3s';
+    body.style.transition = 'color .1s, background-color .3s';
     if (darkMode) {
       document.documentElement.classList.remove('dark');
       localStorage.theme = 'light';
