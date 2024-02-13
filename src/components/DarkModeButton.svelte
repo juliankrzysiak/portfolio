@@ -2,12 +2,15 @@
   import { onMount } from 'svelte';
 
   let darkMode = false;
+  let body: HTMLBodyElement;
 
   onMount(() => {
     darkMode = document.documentElement.classList.contains('dark');
+    body = document.querySelector('body') as HTMLBodyElement;
   });
 
   function handleClick() {
+    body.style.transition = 'color .3s, background-color .3s';
     if (darkMode) {
       document.documentElement.classList.remove('dark');
       localStorage.theme = 'light';
