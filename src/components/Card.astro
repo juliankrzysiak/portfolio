@@ -22,10 +22,8 @@ const { url, title } = Astro.props;
     background-color: var(--color-violet-100);
   }
 
-  :root.dark {
-    & li {
-      background-color: var(--color-slate-800);
-    }
+  :global(:root.dark) li {
+    background-color: var(--color-slate-800);
   }
 
   h2 {

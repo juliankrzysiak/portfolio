@@ -43,10 +43,8 @@ import CodeBlock from './CodeBlock.svelte';
     text-decoration: underline var(--color-rose-900);
   }
 
-  :root.dark {
-    & .links {
-      text-decoration-color: var(--color-violet-500);
-    }
+  :global(:root.dark) .links {
+    text-decoration-color: var(--color-violet-500);
   }
 
   @media (min-width: 1024px) {

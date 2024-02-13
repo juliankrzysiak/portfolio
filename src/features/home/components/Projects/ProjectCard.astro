@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 const {
   details: {
     title,
@@ -76,15 +74,16 @@ const {
     text-decoration: line-through;
   }
 
-  :root.dark {
-    & article {
+  :global(:root.dark) {
+    article {
       background-color: var(--color-slate-800);
     }
-    & img {
+
+    img {
       border-bottom: 0;
     }
 
-    & a {
+    a {
       text-decoration: underline var(--color-primary);
     }
   }

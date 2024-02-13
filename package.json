@@ -10,6 +10,7 @@
     "astro": "astro",
     "pretty": "prettier --write ./src"
   },
+  "browserslist": "defaults",
   "dependencies": {
     "@astrojs/mdx": "^2.0.6",
     "@astrojs/svelte": "^5.0.3",
@@ -19,6 +20,8 @@
     "svelte": "^4.2.8"
   },
   "devDependencies": {
+    "cssnano": "^6.0.3",
+    "postcss-preset-env": "^9.3.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0"
   }
