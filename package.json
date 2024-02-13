@@ -20,8 +20,7 @@
     "svelte": "^4.2.8"
   },
   "devDependencies": {
-    "browserslist": "^4.22.3",
-    "lightningcss": "^1.23.0",
+    "postcss-preset-env": "^9.3.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0"
   }
