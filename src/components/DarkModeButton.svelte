@@ -34,9 +34,7 @@
     background-image: url('../assets/moon.svg');
   }
 
-  :root.dark {
-    & .dark-mode-button {
-      background-image: url('../assets/sun.svg');
-    }
+  :global(:root.dark) .dark-mode-button {
+    background-image: url('../assets/sun.svg');
   }
 </style>

@@ -54,10 +54,8 @@
     background-color: var(--color-violet-300);
   }
 
-  :root.dark {
-    & .container {
-      background-color: var(--color-slate-800);
-    }
+  :global(:root.dark) .container {
+    background-color: var(--color-slate-800);
   }
 
   button {
