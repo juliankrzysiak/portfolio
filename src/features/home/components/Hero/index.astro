@@ -38,7 +38,6 @@ const { title } = Astro.props;
   h1 {
     color: var(--color-primary);
     letter-spacing: 0.5px;
-    transition: color 0.5s;
     font-size: var(--text-3xl);
     font-weight: 600;
   }
@@ -57,17 +56,6 @@ const { title } = Astro.props;
   strong {
     color: var(--color-primary);
     font-weight: 600;
-  }
-
-  a:nth-child(1) strong {
-    transition: color 0.5s 0.1s;
-  }
-
-  a:nth-child(2) strong {
-    transition: color 0.5s 0.2s;
-  }
-  a:nth-child(3) strong {
-    transition: color 0.5s 0.3s;
   }
 
   @media (min-width: 1024px) {
