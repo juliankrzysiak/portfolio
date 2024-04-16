@@ -41,7 +41,7 @@ Desktop Light             |  Mobile Dark
 <img alt="Astro Static Badge" src="https://img.shields.io/badge/Astro-2A233E?style=for-the-badge&logo=astro&logoColor=ff7e33" height="50">
 </a> 
 <br/>
-<a href="https://tailwindcss.com/">  
+<a href="https://svelte.dev/">  
 <img alt="Svelte Static Badge" src="https://img.shields.io/badge/Svelte-2A233E?style=for-the-badge&logo=svelte&logoColor=ff3e00&color=2e2e2e" height="50">
 </a>
 
