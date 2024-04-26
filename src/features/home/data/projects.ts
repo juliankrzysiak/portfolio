@@ -6,11 +6,12 @@ import books from '../assets/tomeTracker_screenshot.png';
 import jiaolongart from '../assets/jiaolongart_screenshot.png';
 import dryweekend from '../assets/dryweekend_screenshot.png';
 import notfound from '../assets/404_screenshot.png';
+import laurelate from '../assets/laurelate_screenshot.png';
 
 const projects: Project[] = [
   {
     title: 'dry weekend',
-    summary: 'A curated list of local Antelope Valley and Los Angeles events.',
+    summary: 'Curated list of local Antelope Valley and Los Angeles events.',
     img: {
       src: dryweekend.src,
     },
@@ -20,8 +21,19 @@ const projects: Project[] = [
     },
   },
   {
+    title: 'Laurelate',
+    summary:
+      'Commissioned website for Laurelate, a new brand creating alternative chocolates using California native plants.',
+    img: {
+      src: laurelate.src,
+    },
+    links: {
+      website: 'https://www.laurelate.com/',
+    },
+  },
+  {
     title: '404 page',
-    summary: "A 404 Page for Codédex's monthly challenge.",
+    summary: "404 Page for Codédex's monthly challenge.",
     img: {
       src: notfound.src,
     },
@@ -41,6 +53,18 @@ const projects: Project[] = [
     },
   },
   {
+    title: 'tomeTracker',
+    summary:
+      "Track what books you've read. Input ratings, reviews, finish dates, filter and search for books, and more.",
+    img: {
+      src: books.src,
+    },
+    links: {
+      website: 'https://tometracker.pages.dev/',
+      github: 'https://github.com/CastillejaCode/book-list',
+    },
+  },
+  {
     title: 'Hydration',
     summary:
       'Record when you watered your plants and when you need to water them next using a calendar.',
@@ -50,17 +74,6 @@ const projects: Project[] = [
     links: {
       website: 'https://water-schedule.pages.dev',
       github: 'https://github.com/CastillejaCode/water-schedule',
-    },
-  },
-  {
-    title: 'tomeTracker',
-    summary:
-      "Track what books you've read. Input ratings, reviews, finish dates, filter and search for books, and more.",
-    img: {
-      src: books.src,
-    },
-    links: {
-      github: 'https://github.com/CastillejaCode/book-list',
     },
   },
   {
