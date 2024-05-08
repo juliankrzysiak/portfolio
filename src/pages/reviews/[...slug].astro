@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, author, date, category, rating, link, description } = Astro.props.entry.data;
+const { title, author, date, category, rating, description } = Astro.props.entry.data;
 ---
 
 <ContentLayout title={title} description={description}>
@@ -30,7 +30,6 @@ const { title, author, date, category, rating, link, description } = Astro.props
     >
     <p>Category: {category}</p>
     <p>Rating: {rating} / 5</p>
-    <a href={link}>Link to buy (not affiliate)</a>
   </div>
   <Content />
 </ContentLayout>
