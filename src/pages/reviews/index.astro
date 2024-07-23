@@ -20,6 +20,7 @@ const latestReviews = reviews.sort((a, b) => b.data.date.getTime() - a.data.date
           title={review.data.title}
           author={review.data.author}
           category={review.data.category}
+          description={review.data.description}
         />
       );
     })
