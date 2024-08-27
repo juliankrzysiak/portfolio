@@ -10,6 +10,18 @@ import laurelate from '../assets/laurelate_screenshot.png';
 
 const projects: Project[] = [
   {
+    title: 'roam',
+    summary:
+      'A roadtrip planning web app where one can create detailed schedules for each day using a map. You can also print out your whole trip plan too!',
+    img: {
+      src: roam.src,
+    },
+    links: {
+      website: 'https://roam-gamma.vercel.app/',
+      github: 'https://github.com/juliankrzysiak/roam',
+    },
+  },
+  {
     title: 'dry weekend',
     summary: 'Curated list of local Antelope Valley and Los Angeles events.',
     img: {
@@ -17,7 +29,7 @@ const projects: Project[] = [
     },
     links: {
       website: 'https://dryweekend.com/',
-      github: 'https://github.com/CastillejaCode/dry-weekend',
+      github: 'https://github.com/juliankrzysiak/dry-weekend',
     },
   },
   {
@@ -32,17 +44,6 @@ const projects: Project[] = [
     },
   },
   {
-    title: '404 page',
-    summary: "404 Page for Codédex's monthly challenge.",
-    img: {
-      src: notfound.src,
-    },
-    links: {
-      website: 'https://404-page-7ty.pages.dev/',
-      github: 'https://github.com/CastillejaCode/404-page',
-    },
-  },
-  {
     title: 'JiaolongArt',
     summary: "Commissioned website for showcasing artist's select portfolio.",
     img: {
@@ -50,18 +51,6 @@ const projects: Project[] = [
     },
     links: {
       website: 'https://jiaolongart.com/',
-    },
-  },
-  {
-    title: 'tomeTracker',
-    summary:
-      "Track what books you've read. Input ratings, reviews, finish dates, filter and search for books, and more.",
-    img: {
-      src: books.src,
-    },
-    links: {
-      website: 'https://tometracker.pages.dev/',
-      github: 'https://github.com/CastillejaCode/book-list',
     },
   },
   {
@@ -73,18 +62,30 @@ const projects: Project[] = [
     },
     links: {
       website: 'https://water-schedule.pages.dev',
-      github: 'https://github.com/CastillejaCode/water-schedule',
+      github: 'https://github.com/juliankrzysiak/water-schedule',
     },
   },
   {
-    title: 'ROAM',
+    title: 'tomeTracker',
     summary:
-      'A road trip planning website that maps out every destination you want to go to, for every day of your trip.',
+      "Track what books you've read. Input ratings, reviews, finish dates, filter and search for books, and more.",
     img: {
-      src: roam.src,
+      src: books.src,
     },
     links: {
-      github: 'https://github.com/CastillejaCode/journey',
+      website: 'https://tometracker.pages.dev/',
+      github: 'https://github.com/juliankrzysiak/tomeTracker',
+    },
+  },
+  {
+    title: '404 page',
+    summary: "404 Page for Codédex's monthly challenge.",
+    img: {
+      src: notfound.src,
+    },
+    links: {
+      website: 'https://404-page-7ty.pages.dev/',
+      github: 'https://github.com/juliankrzysiak/404-page',
     },
   },
 ];
