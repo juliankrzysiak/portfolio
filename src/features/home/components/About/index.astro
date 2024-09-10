@@ -4,17 +4,17 @@ import selfie from '../../assets/selfie.jpg';
 ---
 
 <section id='about'>
-  <h2>
-    <a href='#about' class='section-title'>About</a>
+  <h2 class='section-title'>
+    <a href='#about'>About</a>
   </h2>
   <div class='info'>
-    <div class='person'>
+    <figure class='person'>
       <Image src={selfie} alt='Selfie of Julian Krzysiak.' />
-      <div>
-        <h2>Julian Krzysiak</h2>
-        <h3>Full-Stack Web Developer</h3>
-      </div>
-    </div>
+      <figcaption>
+        <span class='caption'>Julian Krzysiak</span>
+        <span class='sub-caption'>Full-Stack Web Developer</span>
+      </figcaption>
+    </figure>
     <div class='words'>
       <p>
         I am a self-taught web developer who likes to hike, dance, and learn everything about
@@ -50,7 +50,7 @@ import selfie from '../../assets/selfie.jpg';
     align-items: center;
   }
 
-  .person {
+  figure {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -62,19 +62,21 @@ import selfie from '../../assets/selfie.jpg';
       border-width: 2px;
       border-color: var(--color-slate-900);
     }
-
-    & div {
-      text-align: center;
-    }
   }
 
-  h2 {
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .caption {
     font-size: var(--text-2xl);
     font-weight: 500;
     color: var(--color-primary);
   }
 
-  h3 {
+  .sub-caption {
     font-size: var(--text-xl);
   }
 
@@ -96,11 +98,11 @@ import selfie from '../../assets/selfie.jpg';
       gap: 5rem;
     }
 
-    h2 {
+    .caption {
       font-size: var(--text-3xl);
     }
 
-    h3 {
+    .sub-caption {
       font-size: var(--text-xl);
     }
 

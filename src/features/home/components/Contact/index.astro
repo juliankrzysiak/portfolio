@@ -3,18 +3,24 @@ import CodeBlock from './CodeBlock.svelte';
 ---
 
 <section id='contact'>
-  <h2>
-    <a href='#contact' class='section-title'>Contact</a>
+  <h2 class='section-title'>
+    <a href='#contact'>Contact</a>
   </h2>
   <div>
     <CodeBlock client:load='svelte' />
-    <div class='links'>
-      <a href='https://github.com/juliankrzysiak'>GitHub</a>
-      <a href='https://www.linkedin.com/in/juliankrzysiak'>LinkedIn</a>
-      <a href='https://drive.google.com/file/d/1iLPJqukBctXrzHqIq1KBfMOdRx-paxt9/view?usp=sharing'
-        >Resume</a
-      >
-    </div>
+    <ul>
+      <li>
+        <a href='https://github.com/juliankrzysiak'>GitHub</a>
+      </li>
+      <li>
+        <a href='https://www.linkedin.com/in/juliankrzysiak'>LinkedIn</a>
+      </li>
+      <li>
+        <a href='https://drive.google.com/file/d/1iLPJqukBctXrzHqIq1KBfMOdRx-paxt9/view?usp=sharing'
+          >Resume</a
+        >
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -23,18 +29,18 @@ import CodeBlock from './CodeBlock.svelte';
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
-    & > div {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
   }
 
-  .links {
+  div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  ul {
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -44,19 +50,17 @@ import CodeBlock from './CodeBlock.svelte';
     text-decoration: underline var(--color-rose-900);
   }
 
-  :global(:root.dark) .links {
+  :global(:root.dark) ul {
     text-decoration-color: var(--color-violet-500);
   }
 
   @media (min-width: 1024px) {
-    section {
-      & > div {
-        gap: 3rem;
-      }
+    div {
+      gap: 3rem;
+    }
 
-      .links {
-        font-size: var(--text-2xl);
-      }
+    ul {
+      font-size: var(--text-2xl);
     }
   }
 </style>

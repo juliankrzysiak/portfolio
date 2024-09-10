@@ -13,11 +13,11 @@ const {
   <img src={src} alt={alt ?? 'Preview of website'} />
   <div class='info'>
     <div class='words'>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <p>{summary}</p>
     </div>
     <div class='links'>
-      <a href={github}> github</a>
+      <a href={github}>github</a>
       <a href={website}>website</a>
     </div>
   </div>
@@ -49,7 +49,7 @@ const {
     padding: 1rem 1.5rem;
   }
 
-  h2 {
+  h3 {
     font-size: var(--text-2xl);
     font-weight: 500;
     text-align: center;
@@ -66,6 +66,7 @@ const {
     display: flex;
     justify-content: space-between;
     font-size: var(--text-lg);
+    font-weight: 500;
   }
 
   a {
@@ -94,7 +95,7 @@ const {
   }
 
   @media (min-width: 1024px) {
-    h2 {
+    h3 {
       font-size: var(--text-3xl);
     }
   }
