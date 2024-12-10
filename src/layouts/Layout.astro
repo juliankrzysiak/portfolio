@@ -32,6 +32,26 @@ const { title, description } = Astro.props;
       crossorigin
     />
     <slot name='preload' />
+    <!-- Facebook Meta Tags -->
+    <meta property='og:url' content='https://juliankrzysiak.com' />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content='Julian Krzysiak - Full Stack Developer' />
+    <meta
+      property='og:description'
+      content="I'm a web developer from California. I create websites that are clean, optimized, and accessible."
+    />
+    <meta property='og:image' content='https://juliankrzysiak.com/jk_op.jpg' />
+
+    <!-- Twitter Meta Tags -->
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta property='twitter:domain' content='juliankrzysiak.com' />
+    <meta property='twitter:url' content='https://juliankrzysiak.com' />
+    <meta name='twitter:title' content='Julian Krzysiak - Full Stack Developer' />
+    <meta
+      name='twitter:description'
+      content="I'm a web developer from California. I create websites that are clean, optimized, and accessible."
+    />
+    <meta name='twitter:image' content='https://juliankrzysiak.com/jk_op.jpg' />
     <script is:inline>
       // Necessary for view transitions
       document.addEventListener('astro:after-swap', () => {
