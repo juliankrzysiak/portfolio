@@ -7,6 +7,7 @@ import jiaolongart from '../assets/jiaolongart_screenshot.png';
 import dryweekend from '../assets/dryweekend_screenshot.png';
 import notfound from '../assets/404_screenshot.png';
 import laurelate from '../assets/laurelate_screenshot.png';
+import jeblore from '../assets/jeblore_screenshot.png';
 
 const projects: Project[] = [
   {
@@ -22,17 +23,6 @@ const projects: Project[] = [
     },
   },
   {
-    title: 'dry weekend',
-    summary: 'Curated list of local Antelope Valley and Los Angeles events.',
-    img: {
-      src: dryweekend.src,
-    },
-    links: {
-      website: 'https://dryweekend.com/',
-      github: 'https://github.com/juliankrzysiak/dry-weekend',
-    },
-  },
-  {
     title: 'Laurelate',
     summary:
       'Commissioned website for Laurelate, a new brand creating alternative chocolates using California native plants.',
@@ -41,6 +31,28 @@ const projects: Project[] = [
     },
     links: {
       website: 'https://www.laurelate.com/',
+    },
+  },
+  {
+    title: 'jeblore',
+    summary: 'Comissioned website for weekly webcomic.',
+    img: {
+      src: jeblore.src,
+    },
+    links: {
+      website: 'https://jeblore.com/',
+      github: 'https://github.com/juliankrzysiak/jeblore',
+    },
+  },
+  {
+    title: 'dry weekend',
+    summary: 'Curated list of local Antelope Valley and Los Angeles events.',
+    img: {
+      src: dryweekend.src,
+    },
+    links: {
+      website: 'https://dryweekend.com/',
+      github: 'https://github.com/juliankrzysiak/dry-weekend',
     },
   },
   {
