@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const {
   details: {
     title,
@@ -10,7 +12,7 @@ const {
 ---
 
 <article>
-  <img src={src} alt={alt ?? 'Preview of website'} />
+  <Image src={src} alt={alt ?? 'Preview of website'} width={440} height={330} />
   <div class='info'>
     <div class='words'>
       <h3>{title}</h3>
@@ -38,6 +40,7 @@ const {
   img {
     border-bottom: 1px solid var(--color-slate-400);
     aspect-ratio: 4 / 3;
+    width: 100%;
   }
 
   .info {

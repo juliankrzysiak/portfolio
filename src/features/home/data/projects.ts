@@ -15,7 +15,7 @@ const projects: Project[] = [
     summary:
       'A roadtrip planning web app where one can create detailed schedules for each day using a map. You can also print out your whole trip plan too!',
     img: {
-      src: roam.src,
+      src: roam,
     },
     links: {
       website: 'https://roam-gamma.vercel.app/',
@@ -27,7 +27,7 @@ const projects: Project[] = [
     summary:
       'Commissioned website for Laurelate, a new brand creating alternative chocolates using California native plants.',
     img: {
-      src: laurelate.src,
+      src: laurelate,
     },
     links: {
       website: 'https://www.laurelate.com/',
@@ -37,7 +37,7 @@ const projects: Project[] = [
     title: 'jeblore',
     summary: 'Comissioned website for weekly webcomic.',
     img: {
-      src: jeblore.src,
+      src: jeblore,
     },
     links: {
       website: 'https://jeblore.com/',
@@ -48,7 +48,7 @@ const projects: Project[] = [
     title: 'dry weekend',
     summary: 'Curated list of local Antelope Valley and Los Angeles events.',
     img: {
-      src: dryweekend.src,
+      src: dryweekend,
     },
     links: {
       website: 'https://dryweekend.com/',
@@ -59,7 +59,7 @@ const projects: Project[] = [
     title: 'JiaolongArt',
     summary: "Commissioned website for showcasing artist's select portfolio.",
     img: {
-      src: jiaolongart.src,
+      src: jiaolongart,
     },
     links: {
       website: 'https://jiaolongart.com/',
@@ -70,7 +70,7 @@ const projects: Project[] = [
     summary:
       'Record when you watered your plants and when you need to water them next using a calendar.',
     img: {
-      src: hydration.src,
+      src: hydration,
     },
     links: {
       website: 'https://water-schedule.pages.dev',
@@ -82,7 +82,7 @@ const projects: Project[] = [
     summary:
       "Track what books you've read. Input ratings, reviews, finish dates, filter and search for books, and more.",
     img: {
-      src: books.src,
+      src: books,
     },
     links: {
       website: 'https://tometracker.pages.dev/',
@@ -93,7 +93,7 @@ const projects: Project[] = [
     title: '404 page',
     summary: "404 Page for Codédex's monthly challenge.",
     img: {
-      src: notfound.src,
+      src: notfound,
     },
     links: {
       website: 'https://404-page-7ty.pages.dev/',
