@@ -16,6 +16,7 @@ const projects: Project[] = [
       'A roadtrip planning web app where one can create detailed schedules for each day using a map. You can also print out your whole trip plan too!',
     img: {
       src: roam,
+      alt: 'A screenshot showing a location on a map to be added to the planner.',
     },
     links: {
       website: 'https://roam-gamma.vercel.app/',
@@ -28,9 +29,10 @@ const projects: Project[] = [
       'Commissioned website for Laurelate, a new brand creating alternative chocolates using California native plants.',
     img: {
       src: laurelate,
+      alt: 'A screenshot showing a bon bon overlain by text, California Native Chocolate Alternative.',
     },
     links: {
-      website: 'https://www.laurelate.com/',
+      website: 'https://laurelate.com/',
     },
   },
   {
@@ -38,6 +40,7 @@ const projects: Project[] = [
     summary: 'Comissioned website for weekly webcomic.',
     img: {
       src: jeblore,
+      alt: 'Frontpage of the most recent webcomic.',
     },
     links: {
       website: 'https://jeblore.com/',
@@ -49,6 +52,7 @@ const projects: Project[] = [
     summary: 'Curated list of local Antelope Valley and Los Angeles events.',
     img: {
       src: dryweekend,
+      alt: 'Frontpage of a list of upcoming events in Antelope Valley and Los Angeles.',
     },
     links: {
       website: 'https://dryweekend.com/',
@@ -60,6 +64,7 @@ const projects: Project[] = [
     summary: "Commissioned website for showcasing artist's select portfolio.",
     img: {
       src: jiaolongart,
+      alt: 'A screenshot of website showing various art pieces.',
     },
     links: {
       website: 'https://jiaolongart.com/',
@@ -71,6 +76,7 @@ const projects: Project[] = [
       'Record when you watered your plants and when you need to water them next using a calendar.',
     img: {
       src: hydration,
+      alt: 'A screenshot of a calendar and list of plants that need watering.',
     },
     links: {
       website: 'https://water-schedule.pages.dev',
@@ -83,6 +89,7 @@ const projects: Project[] = [
       "Track what books you've read. Input ratings, reviews, finish dates, filter and search for books, and more.",
     img: {
       src: books,
+      alt: 'A screenshot of information regarding a finished book.',
     },
     links: {
       website: 'https://tometracker.pages.dev/',
@@ -94,6 +101,7 @@ const projects: Project[] = [
     summary: "404 Page for Codédex's monthly challenge.",
     img: {
       src: notfound,
+      alt: 'A screenshot of 200 code displayed as coins fall from above.',
     },
     links: {
       website: 'https://404-page-7ty.pages.dev/',
