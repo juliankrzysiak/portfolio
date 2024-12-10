@@ -17,18 +17,11 @@ import selfie from '../../assets/selfie.jpg';
     </figure>
     <div class='words'>
       <p>
-        I am a self-taught web developer who likes to hike, dance, and learn everything about
-        nature.
+        I am a full-stack web developer who likes to hike, dance, and learn everything about
+        California natural history.
       </p>
-      <p>I completed a BS in PsychoBiology, became an EMT, and did pretty well on the MCAT.</p>
-      <p>I was going to become a doctor, but then I didn't.</p>
-      <p>
-        In college I made some amateur websites for my dance club which sparked my interest again.
-      </p>
-      <p>
-        And now I work everyday on learning as much as I can about web development by reading,
-        making stuff, messing up, and making more stuff.
-      </p>
+      <p>I like making websites that are clean, optimized, and accessible.</p>
+      <p>I work mostly in React and dabble in Svelte. Astro is cool for static sites.</p>
     </div>
   </div>
 </section>
@@ -55,12 +48,11 @@ import selfie from '../../assets/selfie.jpg';
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    max-width: 28rem;
+    max-width: 20rem;
 
     img {
-      border-radius: 100%;
-      border-width: 2px;
-      border-color: var(--color-slate-900);
+      border-radius: 50%;
+      border: 1px solid var(--color-slate-900);
     }
   }
 
@@ -86,6 +78,10 @@ import selfie from '../../assets/selfie.jpg';
     gap: 2rem;
     font-size: var(--text-lg);
     line-height: 1.5rem;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   @media (min-width: 1024px) {
