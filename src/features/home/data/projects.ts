@@ -13,7 +13,7 @@ const projects: Project[] = [
   {
     title: 'roam',
     summary:
-      'A roadtrip planning web app where one can create detailed schedules for each day using a map. You can also print out your whole trip plan too!',
+      'A road trip planning web app where one can create detailed schedules for each day using a map. You can even share it with others and print it, too!',
     img: {
       src: roam,
       alt: 'A screenshot showing a location on a map to be added to the planner.',
