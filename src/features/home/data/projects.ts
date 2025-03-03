@@ -8,6 +8,7 @@ import dryweekend from '../assets/dryweekend_screenshot.png';
 import notfound from '../assets/404_screenshot.png';
 import laurelate from '../assets/laurelate_screenshot.png';
 import jeblore from '../assets/jeblore_screenshot.png';
+import scriptbook from '../assets/scriptbook_screenshot.png';
 
 const projects: Project[] = [
   {
@@ -16,11 +17,23 @@ const projects: Project[] = [
       'A road trip planning web app where one can create detailed schedules for each day using a map. You can even share it with others and print it, too!',
     img: {
       src: roam,
-      alt: 'A screenshot showing a location on a map to be added to the planner.',
+      alt: 'Frontpage of the website, a nice landscape background with text explaining the road trip aspect.',
     },
     links: {
       website: 'https://roam-gamma.vercel.app/',
       github: 'https://github.com/juliankrzysiak/roam',
+    },
+  },
+  {
+    title: 'Scriptbook',
+    summary:
+      'Commissioned website for Scriptbook, a new notebook with margins designed for script writing, useful for screenwriters, filmmakers, and more.',
+    img: {
+      src: scriptbook,
+      alt: 'Frontpage of the website, showing an image of the scriptbook itself.',
+    },
+    links: {
+      website: 'https://getscriptbook.com/',
     },
   },
   {
@@ -29,7 +42,7 @@ const projects: Project[] = [
       'Commissioned website for Laurelate, a new brand creating alternative chocolates using California native plants.',
     img: {
       src: laurelate,
-      alt: 'A screenshot showing a bon bon overlain by text, California Native Chocolate Alternative.',
+      alt: 'Frontpage showing a bon bon overlain by text, California Native Chocolate Alternative.',
     },
     links: {
       website: 'https://laurelate.com/',
@@ -37,7 +50,8 @@ const projects: Project[] = [
   },
   {
     title: 'jeblore',
-    summary: 'Comissioned website for weekly webcomic.',
+    summary:
+      'Comissioned website for a weekly webcomic about the adventures of living with a silly creature.',
     img: {
       src: jeblore,
       alt: 'Frontpage of the most recent webcomic.',
