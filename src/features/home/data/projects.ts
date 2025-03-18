@@ -93,7 +93,6 @@ const projects: Project[] = [
       alt: 'A screenshot of a calendar and list of plants that need watering.',
     },
     links: {
-      website: 'https://water-schedule.pages.dev',
       github: 'https://github.com/juliankrzysiak/water-schedule',
     },
   },
