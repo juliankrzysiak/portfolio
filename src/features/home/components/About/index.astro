@@ -29,6 +29,10 @@ import selfie from '../../assets/selfie.jpg';
       <p>
         I work mostly in React and dabble in Svelte. Astro is nice for static sites, like this one.
       </p>
+      <p>
+        If you would like to work together on a project, you can contact me through my web design
+        business, <a href='https://manzanitawebdesign.com/'>manzanitawebdesign.com</a>.
+      </p>
     </div>
   </div>
 </section>
@@ -85,6 +89,10 @@ import selfie from '../../assets/selfie.jpg';
     gap: 2rem;
     font-size: var(--text-lg);
     line-height: 1.5rem;
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   p {
@@ -92,10 +100,6 @@ import selfie from '../../assets/selfie.jpg';
   }
 
   @media (min-width: 1024px) {
-    a {
-      font-size: var(--text-5xl);
-    }
-
     .info {
       flex-direction: row;
       gap: 5rem;
